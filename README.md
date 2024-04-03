@@ -43,16 +43,16 @@
        
 11.	Qu’est-ce qu’une superglobale, combien en existent-ils et donner un exemple d’utilisation 
 12.	Quels sont les différents types (primitifs) que l’on peut associer à une variable en PHP ? Les citer et en donner des exemples (ne pas oublier le type d’une variable sans valeur)
-13.	Existe-t-il plusieurs types de tableaux en PHP, si oui lesquels ?
-14.	Quelles sont les différentes structures de contrôles qu’il existe en algorithmie ? Donner un exemple pour chacune d’entre elles
-15.	Quelle est la fonction PHP permettant de demander la longueur d’une chaîne de caractères ?
-16.	Qu’est-ce qu’une session ? Quelle fonction permet de démarrer une session en PHP ? Donner un exemple d’utilisation en PHP
-17.	Qu’est-ce qu’un cookie ? Donner un exemple d’utilisation en PHP
-18.	Quelle est la différence entre les instructions « require » et « include » en PHP
-19.	Comment effectuer une redirection en PHP ?
-20.	Définir la partie « front-end » et « back-end » d’une application
-21.	Définir le contrôle de version ? Qu’est-ce que Git ?
-22.	Qu’est-ce qu’un CMS ? Citer au moins 2 exemples
+14.	Existe-t-il plusieurs types de tableaux en PHP, si oui lesquels ?
+15.	Quelles sont les différentes structures de contrôles qu’il existe en algorithmie ? Donner un exemple pour chacune d’entre elles
+16.	Quelle est la fonction PHP permettant de demander la longueur d’une chaîne de caractères ?
+17.	Qu’est-ce qu’une session ? Quelle fonction permet de démarrer une session en PHP ? Donner un exemple d’utilisation en PHP
+18.	Qu’est-ce qu’un cookie ? Donner un exemple d’utilisation en PHP
+19.	Quelle est la différence entre les instructions « require » et « include » en PHP
+20.	Comment effectuer une redirection en PHP ?
+21.	Définir la partie « front-end » et « back-end » d’une application
+22.	Définir le contrôle de version ? Qu’est-ce que Git ?
+23.	Qu’est-ce qu’un CMS ? Citer au moins 2 exemples
 
 ## Front-end
 18.	Définir HTML
@@ -85,12 +85,10 @@
 33.	Quelle méthode JavaScript est utilisée pour ajouter un élément à la fin d'un tableau ?
 
 	- Pour ajouter un élément à la fin du tableau indexé on utilise la méthode .push(newElement) de la classe Array par example:
-         tableauIndexe.push(2);
+          tableauIndexe.push(2);
         - Nous ne pouvons pas ajouter seulement un élément au tableau associatif, on peut ajouter une/des pairs (duos) clef/valeur, par example:
           tabAssoc.cle1 = "Valeur1";
-             
-34.	
-35.	
+              
 36.	Qu’est-ce qu’un « media query » ?
 37.	Qu’est-ce qu’un pseudo élément en CSS ?
 38.	Qu’est-ce que Bootstrap ? Donner d’autres exemples équivalent
