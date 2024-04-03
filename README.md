@@ -14,23 +14,39 @@
 
 ## Général
 1.	Quel est l’environnement à installer pour exécuter un script PHP ? Citer 2 exemples de logiciels permettant ce contexte
-2.	Qu’est-ce qu’un algorithme ?
+   
+3.	Qu’est-ce qu’un algorithme ?
     - Un algorithme est une suite finie et non ambiguë d'instructions et d’opérations permettant de résoudre une classe de problèmes.
+      
 4.	Qu’est-ce qu’une variable ? Par quel symbole est préfixée une variable en PHP ?
-5.	Qu’est-ce que la portée d’une variable ?
-6.	Qu’est-ce qu’une constante ? Quelle est la différence avec une variable ?
-7.	Qu’est-ce qu’une superglobale, combien en existent-ils et donner un exemple d’utilisation 
-8.	Quels sont les différents types (primitifs) que l’on peut associer à une variable en PHP ? Les citer et en donner des exemples (ne pas oublier le type d’une variable sans valeur)
-9.	Existe-t-il plusieurs types de tableaux en PHP, si oui lesquels ?
-10.	Quelles sont les différentes structures de contrôles qu’il existe en algorithmie ? Donner un exemple pour chacune d’entre elles
-11.	Quelle est la fonction PHP permettant de demander la longueur d’une chaîne de caractères ?
-12.	Qu’est-ce qu’une session ? Quelle fonction permet de démarrer une session en PHP ? Donner un exemple d’utilisation en PHP
-13.	Qu’est-ce qu’un cookie ? Donner un exemple d’utilisation en PHP
-14.	Quelle est la différence entre les instructions « require » et « include » en PHP
-15.	Comment effectuer une redirection en PHP ?
-16.	Définir la partie « front-end » et « back-end » d’une application
-17.	Définir le contrôle de version ? Qu’est-ce que Git ?
-18.	Qu’est-ce qu’un CMS ? Citer au moins 2 exemples
+   
+    - En informatique, une variable est un symbole (habituellement un nom) qui renvoie à une position de mémoire dont le contenu peut prendre successivement différentes valeurs pendant l'exécution d'un programme.
+    - En mathématiques et en logique, une variable marque un rôle dans une formule, un prédicat ou un algorithme.
+      
+    - Une variable en PHP est préfixée par un symbole dollar $.
+      Le nom est sensible à la casse. Les noms de variables suivent les mêmes règles de nommage que les autres entités PHP.
+      Un nom de variable valide doit commencer par une lettre ou un souligné (_), suivi de lettres, chiffres ou soulignés .
+      Examples: $var = 'Bob'; $Var = 'Joe';.
+      
+6.	Qu’est-ce que la portée d’une variable ?
+	 - La portée d'une variable est la zone de code où elle a été déclarée.
+       En programmation, une variable peut avoir une portée locale ou une portée globale.
+       La portée variable générale s'applique à tous les blocs de code, y compris les classes.
+       Pour contrôler l'accès aux variables et aux fonctions, il est possible d'utiliser des niveaux de contrôle : public, protected, package-protected et private.
+   
+8.	Qu’est-ce qu’une constante ? Quelle est la différence avec une variable ?
+9.	Qu’est-ce qu’une superglobale, combien en existent-ils et donner un exemple d’utilisation 
+10.	Quels sont les différents types (primitifs) que l’on peut associer à une variable en PHP ? Les citer et en donner des exemples (ne pas oublier le type d’une variable sans valeur)
+11.	Existe-t-il plusieurs types de tableaux en PHP, si oui lesquels ?
+12.	Quelles sont les différentes structures de contrôles qu’il existe en algorithmie ? Donner un exemple pour chacune d’entre elles
+13.	Quelle est la fonction PHP permettant de demander la longueur d’une chaîne de caractères ?
+14.	Qu’est-ce qu’une session ? Quelle fonction permet de démarrer une session en PHP ? Donner un exemple d’utilisation en PHP
+15.	Qu’est-ce qu’un cookie ? Donner un exemple d’utilisation en PHP
+16.	Quelle est la différence entre les instructions « require » et « include » en PHP
+17.	Comment effectuer une redirection en PHP ?
+18.	Définir la partie « front-end » et « back-end » d’une application
+19.	Définir le contrôle de version ? Qu’est-ce que Git ?
+20.	Qu’est-ce qu’un CMS ? Citer au moins 2 exemples
 
 ## Front-end
 18.	Définir HTML
