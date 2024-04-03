@@ -16,7 +16,6 @@
 1.	Quel est l’environnement à installer pour exécuter un script PHP ? Citer 2 exemples de logiciels permettant ce contexte
    
 3.	Qu’est-ce qu’un algorithme ?
-   
         - Un algorithme est une suite finie et non ambiguë d'instructions et d’opérations permettant de résoudre une classe de problèmes.
       
 5.	Qu’est-ce qu’une variable ? Par quel symbole est préfixée une variable en PHP ?
@@ -24,15 +23,15 @@
         - En mathématiques et en logique, une variable marque un rôle dans une formule, un prédicat ou un algorithme.
       
         - Une variable en PHP est préfixée par un symbole dollar $.
-          Le nom est sensible à la casse. Les noms de variables suivent les mêmes règles de nommage que les autres entités PHP.
-          Un nom de variable valide doit commencer par une lettre ou un souligné (_), suivi de lettres, chiffres ou soulignés .
-          Examples: $var = 'Bob'; $Var = 'Joe';.
+        - Le nom est sensible à la casse. Les noms de variables suivent les mêmes règles de nommage que les autres entités PHP.
+        - Un nom de variable valide doit commencer par une lettre ou un souligné (_), suivi de lettres, chiffres ou soulignés .
+        - Examples: $var = 'Bob'; $Var = 'Joe';.
       
 6.	Qu’est-ce que la portée d’une variable ?
-	 - La portée d'une variable est la zone de code où elle a été déclarée.
-         - En programmation, une variable peut avoir une portée locale ou une portée globale.
-         - La portée variable générale s'applique à tous les blocs de code, y compris les classes.
-         - Pour contrôler l'accès aux variables et aux fonctions, il est possible d'utiliser des niveaux de contrôle : public, protected, package-protected et private.
+	- La portée d'une variable est la zone de code où elle a été déclarée.
+        - En programmation, une variable peut avoir une portée locale ou une portée globale.
+        - La portée variable générale s'applique à tous les blocs de code, y compris les classes.
+        - Pour contrôler l'accès aux variables et aux fonctions, il est possible d'utiliser des niveaux de contrôle : public, protected, package-protected et private.
    
 8.	Qu’est-ce qu’une constante ? Quelle est la différence avec une variable ?
         - Une constante est une variable dont la valeur ne peut pas être modifiée.
@@ -54,7 +53,8 @@
 ## Front-end
 18.	Définir HTML
 19.	Définir CSS
-20.	Définir Javascript
+20.	
+21.	Définir Javascript
         - Javascript, aussi appelé JS, est le langage qui a rendu possible le « dynamisme côté client » de toutes les applications web.
         - Depuis, grâce à Node.js, il peut également être utilisé côté serveur, ce qui en fait le seul langage pouvant être utilisé en frontend et en backend. ( à compléter...)
    	
