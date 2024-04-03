@@ -16,11 +16,11 @@
 1.	Quel est l’environnement à installer pour exécuter un script PHP ? Citer 2 exemples de logiciels permettant ce contexte
    
 3.	Qu’est-ce qu’un algorithme ?
-4.	
+	
         - Un algorithme est une suite finie et non ambiguë d'instructions et d’opérations permettant de résoudre une classe de problèmes.
       
 5.	Qu’est-ce qu’une variable ? Par quel symbole est préfixée une variable en PHP ?
-6.	
+	
         - En informatique, une variable est un symbole (habituellement un nom) qui renvoie à une position de mémoire dont le contenu peut prendre successivement différentes valeurs pendant l'exécution d'un programme.
         - En mathématiques et en logique, une variable marque un rôle dans une formule, un prédicat ou un algorithme.
       
@@ -30,14 +30,14 @@
         - Examples: $var = 'Bob'; $Var = 'Joe';.
       
 7.	Qu’est-ce que la portée d’une variable ?
-8.	
+	
 	- La portée d'une variable est la zone de code où elle a été déclarée.
         - En programmation, une variable peut avoir une portée locale ou une portée globale.
         - La portée variable générale s'applique à tous les blocs de code, y compris les classes.
         - Pour contrôler l'accès aux variables et aux fonctions, il est possible d'utiliser des niveaux de contrôle : public, protected, package-protected et private.
    
 9.	Qu’est-ce qu’une constante ? Quelle est la différence avec une variable ?
-10.	
+	
         - Une constante est une variable dont la valeur ne peut pas être modifiée.
         - Tenter de modifier la valeur d’une constante provoque une erreur.
        
@@ -59,7 +59,7 @@
 19.	Définir CSS
 20.	
 21.	Définir Javascript
-22.	
+	
         - Javascript, aussi appelé JS, est le langage qui a rendu possible le « dynamisme côté client » de toutes les applications web.
         - Depuis, grâce à Node.js, il peut également être utilisé côté serveur, ce qui en fait le seul langage pouvant être utilisé en frontend et en backend. ( à compléter...)
    	
