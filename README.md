@@ -16,56 +16,62 @@
 1.	Quel est l’environnement à installer pour exécuter un script PHP ? Citer 2 exemples de logiciels permettant ce contexte
    
 3.	Qu’est-ce qu’un algorithme ?
-    - Un algorithme est une suite finie et non ambiguë d'instructions et d’opérations permettant de résoudre une classe de problèmes.
-      
-4.	Qu’est-ce qu’une variable ? Par quel symbole est préfixée une variable en PHP ?
    
-    - En informatique, une variable est un symbole (habituellement un nom) qui renvoie à une position de mémoire dont le contenu peut prendre successivement différentes valeurs pendant l'exécution d'un programme.
-    - En mathématiques et en logique, une variable marque un rôle dans une formule, un prédicat ou un algorithme.
+        - Un algorithme est une suite finie et non ambiguë d'instructions et d’opérations permettant de résoudre une classe de problèmes.
       
-    - Une variable en PHP est préfixée par un symbole dollar $.
-      Le nom est sensible à la casse. Les noms de variables suivent les mêmes règles de nommage que les autres entités PHP.
-      Un nom de variable valide doit commencer par une lettre ou un souligné (_), suivi de lettres, chiffres ou soulignés .
-      Examples: $var = 'Bob'; $Var = 'Joe';.
+5.	Qu’est-ce qu’une variable ? Par quel symbole est préfixée une variable en PHP ?
+        - En informatique, une variable est un symbole (habituellement un nom) qui renvoie à une position de mémoire dont le contenu peut prendre successivement différentes valeurs pendant l'exécution d'un programme.
+        - En mathématiques et en logique, une variable marque un rôle dans une formule, un prédicat ou un algorithme.
+      
+        - Une variable en PHP est préfixée par un symbole dollar $.
+          Le nom est sensible à la casse. Les noms de variables suivent les mêmes règles de nommage que les autres entités PHP.
+          Un nom de variable valide doit commencer par une lettre ou un souligné (_), suivi de lettres, chiffres ou soulignés .
+          Examples: $var = 'Bob'; $Var = 'Joe';.
       
 6.	Qu’est-ce que la portée d’une variable ?
 	 - La portée d'une variable est la zone de code où elle a été déclarée.
-       En programmation, une variable peut avoir une portée locale ou une portée globale.
-       La portée variable générale s'applique à tous les blocs de code, y compris les classes.
-       Pour contrôler l'accès aux variables et aux fonctions, il est possible d'utiliser des niveaux de contrôle : public, protected, package-protected et private.
+         - En programmation, une variable peut avoir une portée locale ou une portée globale.
+         - La portée variable générale s'applique à tous les blocs de code, y compris les classes.
+         - Pour contrôler l'accès aux variables et aux fonctions, il est possible d'utiliser des niveaux de contrôle : public, protected, package-protected et private.
    
 8.	Qu’est-ce qu’une constante ? Quelle est la différence avec une variable ?
-9.	Qu’est-ce qu’une superglobale, combien en existent-ils et donner un exemple d’utilisation 
-10.	Quels sont les différents types (primitifs) que l’on peut associer à une variable en PHP ? Les citer et en donner des exemples (ne pas oublier le type d’une variable sans valeur)
-11.	Existe-t-il plusieurs types de tableaux en PHP, si oui lesquels ?
-12.	Quelles sont les différentes structures de contrôles qu’il existe en algorithmie ? Donner un exemple pour chacune d’entre elles
-13.	Quelle est la fonction PHP permettant de demander la longueur d’une chaîne de caractères ?
-14.	Qu’est-ce qu’une session ? Quelle fonction permet de démarrer une session en PHP ? Donner un exemple d’utilisation en PHP
-15.	Qu’est-ce qu’un cookie ? Donner un exemple d’utilisation en PHP
-16.	Quelle est la différence entre les instructions « require » et « include » en PHP
-17.	Comment effectuer une redirection en PHP ?
-18.	Définir la partie « front-end » et « back-end » d’une application
-19.	Définir le contrôle de version ? Qu’est-ce que Git ?
-20.	Qu’est-ce qu’un CMS ? Citer au moins 2 exemples
+        - Une constante est une variable dont la valeur ne peut pas être modifiée.
+        - Tenter de modifier la valeur d’une constante provoque une erreur.
+       
+10.	Qu’est-ce qu’une superglobale, combien en existent-ils et donner un exemple d’utilisation 
+11.	Quels sont les différents types (primitifs) que l’on peut associer à une variable en PHP ? Les citer et en donner des exemples (ne pas oublier le type d’une variable sans valeur)
+12.	Existe-t-il plusieurs types de tableaux en PHP, si oui lesquels ?
+13.	Quelles sont les différentes structures de contrôles qu’il existe en algorithmie ? Donner un exemple pour chacune d’entre elles
+14.	Quelle est la fonction PHP permettant de demander la longueur d’une chaîne de caractères ?
+15.	Qu’est-ce qu’une session ? Quelle fonction permet de démarrer une session en PHP ? Donner un exemple d’utilisation en PHP
+16.	Qu’est-ce qu’un cookie ? Donner un exemple d’utilisation en PHP
+17.	Quelle est la différence entre les instructions « require » et « include » en PHP
+18.	Comment effectuer une redirection en PHP ?
+19.	Définir la partie « front-end » et « back-end » d’une application
+20.	Définir le contrôle de version ? Qu’est-ce que Git ?
+21.	Qu’est-ce qu’un CMS ? Citer au moins 2 exemples
 
 ## Front-end
 18.	Définir HTML
 19.	Définir CSS
 20.	Définir Javascript
-21.	Définir JSON. Dans quel contexte ce format est-il utilisé ? 
-22.	Peut-on interpréter du Javascript côté serveur ? Si oui, comment ?
-23.	Qu’est-ce qu’un sélecteur CSS ?
-24.	Quelle balise HTML permet de créer un lien hypertexte ?
-25.	Qu’est-ce qu’une requête AJAX ?
-26.	Quel sélecteur CSS permet de sélectionner tous les éléments d’une classe spécifique ? D’un identifiant spécifique ?
-27.	Définir le responsive design
-28.	Qu’est-ce que le templating ?
-29.	Qu’est-ce qu’une fonction anonyme en Javascript ?
-30.	Quelle méthode JavaScript est utilisée pour ajouter un élément à la fin d'un tableau ?
-31.	Qu’est-ce qu’un « media query » ?
-32.	Qu’est-ce qu’un pseudo élément en CSS ?
-33.	Qu’est-ce que Bootstrap ? Donner d’autres exemples équivalent
-34.	Quand un formulaire HTML est créé, quelles sont les 2 méthodes qui peuvent lui être associées ? Donner la différence entre ces 2 méthodes
+        - Javascript, aussi appelé JS, est le langage qui a rendu possible le « dynamisme côté client » de toutes les applications web.
+        - Depuis, grâce à Node.js, il peut également être utilisé côté serveur, ce qui en fait le seul langage pouvant être utilisé en frontend et en backend. ( à compléter...)
+   	
+22.	Définir JSON. Dans quel contexte ce format est-il utilisé ? 
+23.	Peut-on interpréter du Javascript côté serveur ? Si oui, comment ?
+24.	Qu’est-ce qu’un sélecteur CSS ?
+25.	Quelle balise HTML permet de créer un lien hypertexte ?
+26.	Qu’est-ce qu’une requête AJAX ?
+27.	Quel sélecteur CSS permet de sélectionner tous les éléments d’une classe spécifique ? D’un identifiant spécifique ?
+28.	Définir le responsive design
+29.	Qu’est-ce que le templating ?
+30.	Qu’est-ce qu’une fonction anonyme en Javascript ?
+31.	Quelle méthode JavaScript est utilisée pour ajouter un élément à la fin d'un tableau ?
+32.	Qu’est-ce qu’un « media query » ?
+33.	Qu’est-ce qu’un pseudo élément en CSS ?
+34.	Qu’est-ce que Bootstrap ? Donner d’autres exemples équivalent
+35.	Quand un formulaire HTML est créé, quelles sont les 2 méthodes qui peuvent lui être associées ? Donner la différence entre ces 2 méthodes
 
 ## UX UI
 35.	Quelle est la différence entre UX Design et UI Design ?
