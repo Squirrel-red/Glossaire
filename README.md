@@ -31,9 +31,9 @@
       
 7.	Qu’est-ce que la portée d’une variable ?
 	
-	- La portée d'une variable est la zone de code où elle a été déclarée.
+	- La portée d'une variable est la zone de code où elle a été déclarée et peut être utilisée.
         - En programmation, une variable peut avoir une portée locale ou une portée globale.
-        - La portée variable générale s'applique à tous les blocs de code, y compris les classes.
+        - La portée variable générale s'applique à tous les blocs de code, y compris les classes. En JS: lle sera accessible dans les blocs intérieurs.
         - Pour contrôler l'accès aux variables et aux fonctions, il est possible d'utiliser des niveaux de contrôle : public, protected, package-protected et private.
    
 9.	Qu’est-ce qu’une constante ? Quelle est la différence avec une variable ?
@@ -72,11 +72,29 @@
 29.	Définir le responsive design
 30.	Qu’est-ce que le templating ?
 31.	Qu’est-ce qu’une fonction anonyme en Javascript ?
-32.	Quelle méthode JavaScript est utilisée pour ajouter un élément à la fin d'un tableau ?
-33.	Qu’est-ce qu’un « media query » ?
-34.	Qu’est-ce qu’un pseudo élément en CSS ?
-35.	Qu’est-ce que Bootstrap ? Donner d’autres exemples équivalent
-36.	Quand un formulaire HTML est créé, quelles sont les 2 méthodes qui peuvent lui être associées ? Donner la différence entre ces 2 méthodes
+
+32.	- Une fonction anonyme en JavaScript est une fonction qui est définie sans nom.
+        -  Ces fonctions sont souvent utilisées pour créer des fonctions qui ne seront pas réutilisées ailleurs ou pour passer une fonction en tant qu’argument à une autre fonction. 
+        - Voici un exemple simple :
+          setTimeout(function() {
+             console.log('Ceci est une fonction anonyme');
+          }, 1000);
+        - Dans cet exemple, setTimeout utilise une fonction anonyme qui affiche un message dans la console après un délai d’une seconde.
+        - La fonction est exécutée une fois et n’a pas besoin d’être nommée car elle n’est pas utilisée ailleurs.
+
+33.	Quelle méthode JavaScript est utilisée pour ajouter un élément à la fin d'un tableau ?
+
+	- Pour ajouter un élément à la fin du tableau indexé on utilise la méthode .push(newElement) de la classe Array par example:
+         tableauIndexe.push(2);
+        - Nous ne pouvons pas ajouter seulement un élément au tableau associatif, on peut ajouter une/des pairs (duos) clef/valeur, par example:
+          tabAssoc.cle1 = "Valeur1";
+             
+34.	
+35.	
+36.	Qu’est-ce qu’un « media query » ?
+37.	Qu’est-ce qu’un pseudo élément en CSS ?
+38.	Qu’est-ce que Bootstrap ? Donner d’autres exemples équivalent
+39.	Quand un formulaire HTML est créé, quelles sont les 2 méthodes qui peuvent lui être associées ? Donner la différence entre ces 2 méthodes
 
 ## UX UI
 35.	Quelle est la différence entre UX Design et UI Design ?
