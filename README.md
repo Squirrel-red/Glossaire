@@ -73,7 +73,7 @@
 30.	Qu’est-ce que le templating ?
 31.	Qu’est-ce qu’une fonction anonyme en Javascript ?
 
-32.	- Une fonction anonyme en JavaScript est une fonction qui est définie sans nom.
+	- Une fonction anonyme en JavaScript est une fonction qui est définie sans nom.
         -  Ces fonctions sont souvent utilisées pour créer des fonctions qui ne seront pas réutilisées ailleurs ou pour passer une fonction en tant qu’argument à une autre fonction. 
         - Voici un exemple simple :
           setTimeout(function() {
