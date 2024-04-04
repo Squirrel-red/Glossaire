@@ -81,6 +81,15 @@
           }, 1000);
         - Dans cet exemple, setTimeout utilise une fonction anonyme qui affiche un message dans la console après un délai d’une seconde.
         - La fonction est exécutée une fois et n’a pas besoin d’être nommée car elle n’est pas utilisée ailleurs.
+          
+        - Autre exemple forEach
+        - forEach prend en paramètre une fonction dite "callback (ou fonction de rappel) qui sera  exécuté à chaque tour de boucle.
+        - Dans cette fonction anonyme, chaque "li" sera représenté par la variable passée en argument "element" (qui peut etre nommée autrement si besoin)
+        -     let listElements = list.querySelectorAll("li")
+              // pour modifier des éléments du DOM (la propriété style de chaque élément en effectuant un boucle forEach( sur  la NodeList))
+              listElements.forEach(function(element){
+                  element.style.color = "red"
+              })
 
 33.	Quelle méthode JavaScript est utilisée pour ajouter un élément à la fin d'un tableau ?
 
