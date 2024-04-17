@@ -381,25 +381,44 @@ IV. Programmation orientée objet (POO)
    	  L’intérêt des classes abstraites est de regrouper plusieurs classes sous un même nom de classe (par polymorphisme)
    	 ainsi que de décrire partiellement des attributs et méthodes communs à plusieurs classes.
    	
-15.	Définir le chaînage de méthodes
+13.	Définir le chaînage de méthodes
 
         - Chainer des méthodes nous permet d’exécuter plusieurs méthodes d’affilée de façon simple et plus rapide,
    	  en les écrivant à la suite les unes des autres, « en chaine ». Exemple : "$topic->getMember() . " inscrit le " . $topic->getInscriptionDate()".
    	
-16.	Qu’est-ce que la méthode __toString() ? Existe-t-il d’autres méthodes « magiques »
+14.	Qu’est-ce que la méthode __toString() ? Existe-t-il d’autres méthodes « magiques »
 
-        xxx
+        - La méthode magique __toString() va être appelée dès que l’on va traiter un objet comme une chaine de caractères
+   	  (par exemple lorsqu’on tente d’echo un objet). Il existes d'autres méthodes magiques :
+
+          __construct(),
+          __destruct(),
+          __call(),
+          __callStatic(),
+          __get(),
+          __set(),
+          __isset(),
+          __unset(),
+          __clone(),
+          __sleep(),
+          __wakeup(),
+          __invoke(),
+          __set_state(),
+          __debugInfo().
    	
-18.	Qu’est-ce qu’un « autoload » ?
+15.	Qu’est-ce qu’un « autoload » ?
 
 	- C'est une fonction qui va aller chercher toutes les classes existantes dans les autres fichiers php :
           spl_autoload_register(function ($class_name) {   require 'classes/'. $class_name .'.php';}   );
         
-19.	Comment appelle-t-on en français les « getters » et les « setters » ?
+16.	Comment appelle-t-on en français les « getters » et les « setters » ?
 
-        - Les getters renvoient la valeur de la variable et les setters permettent de la changer.
+        - Les « getters » sont appelés des « accesseurs » et les « setters » sont appelés des « mutateurs ».
+   	  Un accesseur est une méthode qui permet de récupérer la valeur d'un attribut d'un objet, tandis qu'un mutateur est une méthode
+   	  qui permet de modifier la valeur d'un attribut d'un objet. 
+          En bref: Les getters renvoient la valeur de la variable et les setters permettent de la changer.
    	
-20.	Qu’est-ce que la sérialisation en PHP ?
+17.	Qu’est-ce que la sérialisation en PHP ?
 
         xxx
    	
