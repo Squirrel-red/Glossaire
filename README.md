@@ -323,41 +323,127 @@ IV. Programmation orientée objet (POO)
 ----------------------------------------------------------------------------------------------------------------------
 V. Architecture 
 ----------------------------------------------------------------------------------------------------------------------
-60.	Qu’est-ce que l’architecture client / serveur ? Grâce à quel type de requête peut-on interroger le serveur. Définir l’acronyme de ce type de requête. Si on ajoute un « S » à cet acronyme, expliquer la différence
-61.	Donner la définition d’un design pattern. Citer au moins 3 exemples de design pattern
-62.	Qu’est-ce que l’architecture MVC ?
-63.	Quel est le rôle de chaque couche du design pattern MVC : Model, View, Controller ?
-64.	Quels sont les avantages de l’architecture MVC ?
-65.	Existe-t-il des variantes à l’architecture MVC ?
-66.	Qu’est-ce qu’une API ? Définir l’architecture REST
+1.	Qu’est-ce que l’architecture client / serveur ? Grâce à quel type de requête peut-on interroger le serveur.
+         Définir l’acronyme de ce type de requête. Si on ajoute un « S » à cet acronyme, expliquer la différence
 
-## Modélisation - Base de données
-67.	Qu’est-ce que la modélisation de données ? Définir la méthode Merise
-68.	Quelles sont les 3 étapes principales de la méthode Merise ? 
-a.	Analyse, conception et réalisation
-b.	Planification, exécution et contrôle
-c.	Création, modification et suppression
-69.	Qu’est-ce qu’un modèle conceptuel de données (MCD) en Merise ?
-70.	Qu’est-ce qu’un modèle logique de données (MLD) en Merise ?
-71.	Donner la définition des mots suivants :
-a.	Entité
-b.	Relation
-c.	Cardinalité
-d.	Clé primaire / clé étrangère
-72.	Que devient une relation de type « Many To Many » dans le modèle logique de données ?
-73.	Qu’est-ce qu’une base de données ?
-74.	Définir les notions suivantes : 
-a.	SQL
-b.	MySQL
-c.	SGBD (donner 2 exemples de SGBD)
-75.	Dans une base de données, les données sont stockées dans des ___. Celles-ci sont constituées de lignes appelées ___ et de colonnes appelées ___
-76.	Quelle est la différence entre une base de données relationnelle et non relationnelle ?
-77.	Qu’est-ce qu’une jointure dans une base de données ? En existe-t-il plusieurs ? Si oui lesquelles ?
-78.	A quoi sert une vue dans une base de données ?
-79.	Qu’est-ce que l’intégrité référentielle dans une base de données ?
-80.	Quelles sont les fonctions d’agrégation en SQL ?
-81.	Qu’est-ce qu’un CRUD dans le contexte d’une base de données ?
-82.	Quelles sont les clauses qui permettent de :
+	  xxx
+  	
+2.	Donner la définition d’un design pattern. Citer au moins 3 exemples de design pattern.
+
+	- Un design pattern est un patron d'architecture ce qui permet quelques avantages :
+          respecter des méthodes de conception professionnellement reconnues ;
+          développer plus rapidement en suivant des modèles architecturaux ayant fait elurs prevues ;
+          permettre au code d'être relu plus facilement par un autre développeur sensibilisé aux pattenrs utilisés.
+          Exemple : Factory, Composite, Iterator, Observer, Singleton, Strategy, Template.
+   
+3.	Qu’est-ce que l’architecture MVC ?
+    
+        - C'est un patron de conception concernant l'agencement du code, segmenté en trois sections :
+   	  modèle, vue, controlleur.
+	
+4.	Quel est le rôle de chaque couche du design pattern MVC : Model, View, Controller ?
+
+        - Modèle : cette partie gère ce qu'on appelle la logique métier du site.
+  	  Elle comprend notamment la gestion des données qui sont stockées, mais aussi tout le code qui prend des décisions autour de ces données.
+  	  Son objectif est de fournir une interface d'action la plus simple possible au contrôleur.
+  	  On y trouve donc entre autres des algorithmes complexes et des requêtes SQL.
+  	
+        - Vue : cette partie se concentre sur l'affichage.
+  	  Elle ne fait presque aucun calcul et se contente de récupérer des variables pour savoir ce qu'elle doit afficher.
+  	  On y trouve essentiellement du code HTML mais aussi quelques boucles et conditions PHP très simples,
+  	   pour afficher par exemple une liste de messages.
+  	
+        - Contrôleur : cette partie gère les échanges avec l'utilisateur. C'est en quelque sorte l'intermédiaire entre l'utilisateur,
+  	  le modèle et la vue. Le contrôleur va recevoir des requêtes de l'utilisateur. Pour chacune, il va demander au modèle d'effectuer certaines actions
+  	  (lire des articles de blog depuis une base de données, supprimer un commentaire) et de lui renvoyer les résultats
+  	  (la liste des articles, si la suppression est réussie).
+  	  Puis il va adapter ce résultat et le donner à la vue.
+  	  Enfin, il va renvoyer la nouvelle page HTML, générée par la vue, à l'utilisateur.
+  	
+5.	Quels sont les avantages de l’architecture MVC ?
+
+         xxx
+6.	Existe-t-il des variantes à l’architecture MVC ?
+   
+         - Modèle-Vue-Présentateur (MVP)
+         - Modèle-Vue-VueModèle (MVVM)
+         - Modèle-Adaptateur-Vue (MAV)
+         - Modèle-Vue-Contrôleur-Frontière (MVCF)
+         - Modèle-Interactions-Vues-État (MIVES)
+  	
+7.	Qu’est-ce qu’une API ? Définir l’architecture REST
+
+         - C'est une interface de traitement d'applications entre un serveur web et un navigateur web.
+  	   L'architecture REST (Representational State Transfer) définit les principes REST par 4 contrôles d'interface,
+  	   notamment l'identification des ressources, la gestion des ressources via des représentations,
+  	   l'activation des communications autodescriptives et la transformation de l'hypermédia en moteur de l'état de l'application.
+
+---------------------------------------------------------------------------------------------------------------------------------------
+VI. Modélisation - Base de données
+---------------------------------------------------------------------------------------------------------------------------------------
+1.	Qu’est-ce que la modélisation de données ? Définir la méthode Merise
+
+        - C'est le processus de création d'une représentation visuelle ou d'un plan
+   	  qui définit les systèmes de collecte et de gestion de l'information de toute organisation.
+          La méthode Merise est une méthode d'analyse, de conception et de réalisation de systèmes d'informations.
+   	
+2.	Quelles sont les 3 étapes principales de la méthode Merise ?
+
+	 - a. Analyse, conception et réalisation   - Cette réponse OK.
+         - b. Planification, exécution et contrôle
+         - c. Création, modification et suppression
+           
+
+3.	Qu’est-ce qu’un modèle conceptuel de données (MCD) en Merise ?
+
+        - Le MCD fournit une description graphique pour représenter des modèles de données
+  	   sous la forme de diagrammes pouvant contenir des entités ou des associations.
+  	
+4.	Qu’est-ce qu’un modèle logique de données (MLD) en Merise ?
+
+        - C'est une représentation structurée et normalisée des données d'un système d'information,
+  	  conçue pour être directement implémentable dans une base de données relationnelle.
+  	
+5.	Donner la définition des mots suivants :
+        a.	Entité
+        b.	Relation
+        c.	Cardinalité
+        d.	Clé primaire / clé étrangère
+
+        a. Entité : Une entité est un objet ou un concept identifiable qui peut être représenté dans une base de données. Exemple : 'Livre' et 'Auteur'
+        b. Relation : Une relation c'est une association entre les différentes entités. Elle représente la manière
+  	   dont les données sont liées les unes aux autres. Exemple : 'Livre' et 'Auteur', un livre est écrit par un auteur.
+        c. Cardinalité : Sert à compter le nombre minimum et maximum de possibilités que chaque classe contient dans la relation liant deux ou plusieurs objets.
+        d. Clé primaire : garanti l'unicité d'un enregistrement dans une table;
+           Clé étrangère : garanti le lien avec une autre table.
+           Clé primaire dans table associative : c'est l'association des clés étrangères qui fait que la table associatve est la clé primaire.
+  	
+6.	Que devient une relation de type « Many To Many » dans le modèle logique de données ?
+
+	 xxx
+   
+7.	Qu’est-ce qu’une base de données ?
+
+        - Une base de données est un outil qui permet de collecter et d'organiser des informations.
+  	
+8.	Définir les notions suivantes : 
+       - a. SQL b.MySQL c.SGBD (donner 2 exemples de SGBD)
+
+        - a. SQL : Structured Query Language, c'est un langage informatique normalisé servant à exploiter des bases de données relationnelles.
+        - b. MySQL : MySQL est un système de gestion de bases de données relationnelles.
+        - c. SGBD (donner 2 exemples de SGBD) : Système de gestion de base de données, c'est un logiciel système permettant aux utilisateurs et programmeurs
+  	  de créer et de gérer des bases de données, exemple : MySQL, Oracle et SQL Server.
+  	
+9.	Dans une base de données, les données sont stockées dans des ___. Celles-ci sont constituées de lignes appelées ___ et de colonnes appelées ___
+
+        - 
+10.	Quelle est la différence entre une base de données relationnelle et non relationnelle ?
+11.	Qu’est-ce qu’une jointure dans une base de données ? En existe-t-il plusieurs ? Si oui lesquelles ?
+12.	A quoi sert une vue dans une base de données ?
+13.	Qu’est-ce que l’intégrité référentielle dans une base de données ?
+14.	Quelles sont les fonctions d’agrégation en SQL ?
+15.	Qu’est-ce qu’un CRUD dans le contexte d’une base de données ?
+16.	Quelles sont les clauses qui permettent de :
 a.	Insérer un nouvel enregistrement dans une table
 b.	Modifier un enregistrement dans une table
 c.	Supprimer un enregistrement dans une table
@@ -366,21 +452,45 @@ e.	Filtrer les résultats d’une requête SQL
 f.	Trier les résultats d’une requête SELECT
 g.	Regrouper les résultats d'une requête SELECT en fonction d'une colonne spécifique
 h.	Concaténer 2 chaînes de caractères 
-83.	Comment se connecter à une base de données en PHP ? Quelle est la classe native utilisée ?
+17.	Comment se connecter à une base de données en PHP ? Quelle est la classe native utilisée ?
 
-## Symfony
+---------------------------------------------------------------------------------------------------------------------------
+VII. Symfony
+--------------------------------------------------------------------------------------------------------------------------
 84.	Qu’est-ce que Symfony ?
-85.	Sur quel langage de programmation et design pattern repose Symfony ? 
+
+        - Symfony est un framework PHP "open source" utilisé par les développeurs pour créer
+   	  des sites ou applications web complexes, robustes, fiables, évolutifs, maintenables et performants.
+   	
+85.	Sur quel langage de programmation et design pattern repose Symfony ?
+
+	 - Le langage de programmation sur lequel repose Symfony est le PHP.
+           Le design pattern sur lequel repose Symfony est le modèle de conception MVC (Modèle-Vue-Contrôleur).
+           Les données de l'application (le modèle) sont séparées de l'interface utilisateur (la vue) et de la logique de contrôle (le contrôleur),
+           ce qui permet une meilleure organisation du code et une meilleure maintenabilité de l'application.
+    
 86.	Quelle est la dernière version en date de Symfony ?
-87.	Qu’est-ce qu’un bundle ? 
+
+	 - La dernière version en date de Symfony est là 7.0.5 (Stable Release, 6.4.5 pour la LTS (Long-Term Support)).
+    
+87.	Qu’est-ce qu’un bundle ?
+
+        - Un bundle est une offre groupée, un ensemble de produits vendus ensemble.
+   	
 88.	Quel est le moteur de template utilisé par défaut dans Symfony ?
+
+        - Le moteur de template par défaut est Twig. c'est un moteur de template flexible, rapide et sécurisé, spécialement conçu pour être utilisé avec PHP.
+   	  Il est simple à utiliser et a une bonne capacité à séparer efficacement la logique de présentation de la logique métier dans les applications web.
+   	
 89.	Qu’est-ce qu’un ORM ? Quel est son utilité et comment s’appelle-t-il au sein de Symfony ?
 90.	Qu’est-ce que l’injection de dépendances ? Quel est l’outil utilisé dans ce contexte et quel fichier contient l’intégralité des dépendances du projet ?
 91.	Que permet le bundle Maker au sein de Symfony ? 
 92.	Quel est le langage de requêtage exploité au sein d’un projet Symfony ?
 93.	Quel est le composant qui garantit l’authentification et l’autorisation des utilisateurs ?
-
-## Sécurité
+    
+------------------------------------------------------------------------------------------------------------------------
+VIII. Sécurité
+------------------------------------------------------------------------------------------------------------------------
 94.	Qu’est-ce que l’injection SQL ? Comment s’en prémunir ?
 95.	Qu’est-ce que la faille XSS ? Comment s’en prémunir ?
 96.	Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
@@ -392,32 +502,64 @@ h.	Concaténer 2 chaînes de caractères
 102.	Qu’est-ce que l’hameçonnage ?
 103.	Définir la « validation des entrées »
 
-## RGPD
+-----------------------------------------------------------------------------------------------------------------------
+IX. RGPD
+------------------------------------------------------------------------------------------------------------------------
 104.	Qu’est-ce que le RGPD ?
-105.	Quel est son objectif principal ?
-106.	Quelle est la date d’entrée en vigueur du RGPD ?
-107.	Quelles sont les sanctions possibles en cas de non-respect du RGPD ?
-108.	En France, quel est l’autorité administrative qui s’occupe de faire appliquer le RGPD ?
-109.	Quel est le consentement valide selon le RPGD ?
-110.	Qu’est-ce qu’une politique de confidentialité ?
-111.	Quelle est la durée de conservation maximale des données personnelles selon le RGPD ?
-112.	Quels sont les droits des utilisateurs selon le RGPD ?
-113.	Qu’est-ce que le principe de minimisation des données selon le RGPD ?
+
+        - C'est le Règlement Général de la Protection des Données.
+          
+106.	Quel est son objectif principal ?
+107.	Quelle est la date d’entrée en vigueur du RGPD ?
+108.	Quelles sont les sanctions possibles en cas de non-respect du RGPD ?
+109.	En France, quel est l’autorité administrative qui s’occupe de faire appliquer le RGPD ?
+110.	Quel est le consentement valide selon le RPGD ?
+111.	Qu’est-ce qu’une politique de confidentialité ?
+112.	Quelle est la durée de conservation maximale des données personnelles selon le RGPD ?
+113.	Quels sont les droits des utilisateurs selon le RGPD ?
+114.	Qu’est-ce que le principe de minimisation des données selon le RGPD ?
 
 ## SEO
-114.	Qu’est-ce que le SEO ? 
-115.	Quel est l’objectif principal du SEO ?
-116.	Existe-t-il plusieurs types de référencement ? Lesquels ?
-117.	Qu’est-ce que la densité de mots-clés en SEO ?
-118.	Qu’est-ce qu’une balise « alt » ?
-119.	Qu’est-ce que la balise « meta description » ?
-120.	Qu’est-ce que le « nofollow » en SEO ?
-121.	Quelle est l'importance du contenu de qualité pour le référencement d'un site web ?
-122.	Pourquoi est-il important d'utiliser des balises de titre (h1, h2, h3, etc.) de manière structurée ?
-123.	Quelle est la recommandation pour les URL d'un site web bien référencé ?
-124.	Qu'est-ce que le maillage interne et pourquoi est-il important pour le référencement ?
-125.	Qu'est-ce que l'optimisation des images pour le référencement ?
-126.	Qu'est-ce qu'un plan de site (sitemap) et pourquoi est-il important pour le référencement ?
+1.	Qu’est-ce que le SEO ?
+     
+      - Le SEO (Search Engine Optimization) est l'acronyme qui signifie « Optimisation pour les moteurs de recherche » en français.
+    	
+2.	Quel est l’objectif principal du SEO ?
+
+        - C'est un ensemble de techniques permettant d'améliorer le positionnenement d'un site web dans les moteurs de recherche (Google, Bing, Yahoo, etc.)
+           afin de le rendre visible auprès des internautes.
+          
+3.	Existe-t-il plusieurs types de référencement ? Lesquels ?
+
+        - Les trois différents types de référencement sont le SEO sur-page, le SEO hors-page et le SEO technique.
+  	
+4.	Qu’est-ce que la densité de mots-clés en SEO ?
+   
+5.	Qu’est-ce qu’une balise « alt » ?
+
+      - La balise ALT, également connue sous le nom d'« attribut ALT », correspond au texte alternatif d'une image ou d'un visuel sur une page Internet.
+        Il fait partie des champs possibles à remplir en codage HTML et permet de donner une description de l'image ou du visuel
+        si ce dernier n'apparaît pas à l'écran.
+        
+6.	Qu’est-ce que la balise « meta description » ?
+
+        - La Meta Description est une des balises HTML les plus connues en référencement.
+  	  Elle permet de fournir une description aux moteurs de recherche pour l’affichage des résultats au sein des SERP ou aux applications web
+  	  ayant besoin d’un petit résumé rapide. De plus, lorsqu’elle est de qualité, elle peut inciter l’internaute à cliquer sur votre site
+  	  ce qui augmente le trafic naturel.
+  	
+7.	Qu’est-ce que le « nofollow » en SEO ?
+
+        - Un lien nofollow est un lien inséré par l'éditeur sur un contenu de son site internet.
+  	  Ce lien a la particularité de donner l'indication aux moteurs de recherche de ne pas suivre son contenu et
+  	  donc de ne pas le prendre en compte pour le référencement naturel du site.
+  	
+8.	Quelle est l'importance du contenu de qualité pour le référencement d'un site web ?
+9.	Pourquoi est-il important d'utiliser des balises de titre (h1, h2, h3, etc.) de manière structurée ?
+10.	Quelle est la recommandation pour les URL d'un site web bien référencé ?
+11.	Qu'est-ce que le maillage interne et pourquoi est-il important pour le référencement ?
+12.	Qu'est-ce que l'optimisation des images pour le référencement ?
+13.	Qu'est-ce qu'un plan de site (sitemap) et pourquoi est-il important pour le référencement ?
 
 ## Gestion de projets - DevOps
 127.	Qu’est-ce que la gestion de projet ?	
