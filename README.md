@@ -16,14 +16,17 @@
 I. Général
  --------------------------------------------------------------------------------------------------------------------------------
 1.	Quel est l’environnement à installer pour exécuter un script PHP ? Citer 2 exemples de logiciels permettant ce contexte
+   
         - Il faut installer un environnement côté serveur.
   	  Deux exemple : Laragon que l'on utilise en cours, et XAMPP
   	
 2.	Qu’est-ce qu’un algorithme ?
+   
         - Un algorithme est une suite finie et non ambiguë d'instructions et d’opérations
   	  permettant de résoudre une classe de problèmes.
       
 3.	Qu’est-ce qu’une variable ? Par quel symbole est préfixée une variable en PHP ?
+   
         - En informatique, une variable est un symbole (habituellement un nom) qui renvoie à une position de mémoire
   	  dont le contenu peut prendre successivement différentes valeurs pendant l'exécution d'un programme.
         - En mathématiques et en logique, une variable marque un rôle dans une formule, un prédicat ou un algorithme.
@@ -34,6 +37,7 @@ I. Général
         - Examples: $var = 'Bob'; $Var = 'Joe';.
       
 4.	Qu’est-ce que la portée d’une variable ?
+   
 	- La portée d'une variable est la zone de code où elle a été déclarée et peut être utilisée.
         - En programmation, une variable peut avoir une portée locale ou une portée globale.
         - La portée variable générale s'applique à tous les blocs de code, y compris les classes.
@@ -42,10 +46,12 @@ I. Général
            des niveaux de contrôle : public, protected, package-protected et private.
    
 5.	Qu’est-ce qu’une constante ? Quelle est la différence avec une variable ?
+   
         - Une constante est une variable dont la valeur ne peut pas être modifiée.
         - Tenter de modifier la valeur d’une constante provoque une erreur.
        
 6.	Qu’est-ce qu’une superglobale, combien en existent-ils et donner un exemple d’utilisation
+   
         - Une superglobale PHP est une variable PREDEFINIE, disponible partout et tout le temps dans un script.
   	 Il en existe 8 :
          - $_GET
@@ -60,6 +66,7 @@ I. Général
  	 
 7.	Quels sont les différents types (primitifs) que l’on peut associer à une variable en PHP ?
         Les citer et en donner des exemples (ne pas oublier le type d’une variable sans valeur)
+  	
 	 - $string = "Bonjour";
          - $number = 13;
          - $float = 12.34;
@@ -69,8 +76,8 @@ I. Général
          - $dateTime = new Date('1995-07-03')
  
 8.	Existe-t-il plusieurs types de tableaux en PHP, si oui lesquels ?
-	    Oui, il existe différents types de tableaux.
-
+	
+	  - Oui, il existe différents types de tableaux.
           - Il existe les tableaux simples de variables tel que :
             array(1, 2, 3, "a", "b", "c")
           - Et il existe les tableaux "associatifs" avec la forme clé => valeur, où l'on attribue à chaque clé une valeur :
@@ -78,9 +85,12 @@ I. Général
 
 
 9.	Quelles sont les différentes structures de contrôles qu’il existe en algorithmie ?
-        Donner un exemple pour chacune d’entre elles
-
-	xxx
+        Donner un exemple pour chacune d’entre elles.
+        xxx
+	-En algorithmie, les structures de contrôle principales sont :
+        Séquence : Exécution d’instructions l’une après l’autre.
+        Sélection : Structures conditionnelles comme if, else, et switch qui permettent d’exécuter des instructions différentes selon des conditions.
+        Itération : Boucles comme for, while, et do-while qui répètent des instructions jusqu’à ce qu’une condition soit remplie.
 
 10.	Quelle est la fonction PHP permettant de demander la longueur d’une chaîne de caractères ?
 	- La fonction est : "strlen(string $string): int", elle retourne la taille de la chaîne string en int
@@ -98,10 +108,10 @@ I. Général
         - La différence est que " require " provoque une erreur bloquante (fatal error) (E_COMPILE_ERROR) et arrêtera le script,
    	  tandis que " include " provoque un avertissement (warning) (E_WARNING) mais le script continue de fonctionner.
    	
-14.	Comment effectuer une redirection en PHP ?
+16.	Comment effectuer une redirection en PHP ?
         - Avec la fonction header() de PHP on peut renvoyer l'internaute d'une page à l'autre en PHP.
    	
-15.	Définir la partie « front-end » et « back-end » d’une application
+17.	Définir la partie « front-end » et « back-end » d’une application
         - La partie " front-end " (côté client) d'une application fait référence à ce que voient les utilisatuers :
    	 texte, images, boutons... et avec lesquels les utilisateurs peuvent intéragir (menus de navigation...), on utilise
    	 le HTML, le CSS ou encore le JS pour contrôler la structure, le visuel ou encore le responsive d'une page internet.
@@ -109,13 +119,13 @@ I. Général
    	  Elle traite les demandes dues aux interactions des users (remplir un champ de texte avec des données personnelles ...).
 
 
-16.	Définir le contrôle de version ? Qu’est-ce que Git ?
+18.	Définir le contrôle de version ? Qu’est-ce que Git ?
          - Le contrôle de version, également appelé contrôle de source, désigne la pratique consistant à suivre et à gérer
    	 les changements apportés au code d'un logiciel.
    	 - Git est un système de contrôle de version. Il s’agit d’un outil de développement qui aide une équipe de développeurs
            à gérer les changements apportés au code source au fil du temps.
        
-17.	Qu’est-ce qu’un CMS ? Citer au moins 2 exemples.
+19.	Qu’est-ce qu’un CMS ? Citer au moins 2 exemples.
 	 - C'est un Système de Gestion de Contenu (Content Management System), cela permet de créer, modifier facilement
          un site internet (blog, site de vente en ligne...). Il existe par exemple : WordPress, TYPO3, Drupal, PrestaShop...
 
@@ -585,6 +595,7 @@ X. SEO
 XI. Gestion de projets - DevOps
 -----------------------------------------------------------------------------------------------------------------
 1.	Qu’est-ce que la gestion de projet ?
+   
         - La gestion de projet, ou le management de projet, est un mode de réalisation d'un projet,
          ou' l'application des techniques de gestion pendant le cycle de vie du projet permet
          d'atteindre des objectifs précis. Le gestionnaire de projet est le responsable de l'organisation,
@@ -592,28 +603,109 @@ XI. Gestion de projets - DevOps
          Il doit aussi gérer les contraintes, les risques et les impacts du projet.
   	 Les principales étapes de la gestion de projets: Conception->Planification->Exécution->Contrôle->Clôture->Bilan.
           
-3.	Qu’est-ce qu’une méthode Agile de gestion de projet ?
+2.	Qu’est-ce qu’une méthode Agile de gestion de projet ?
         - La méthode Agile est une méthode flexible qui consiste à découper un projet en plusieurs petits projets, de sorte que le client puisse valider chaque étape au fur et à mesure.
   	La méthode Agile est un parfait moyen de s’assurer la satisfaction de ses clients et un minimum de retours à la fin du projet. 
         Elle implique  une collaboration constante tant entre les membres de l'équipe qu'avec les parties prenantes du projets, une amélioration et une itération continues à 
         chaque étape.  Une fois le travail commencé, les équipes suivent un processus de planification, d'exécution et d'évaluation, qui permet de modifier facilement le livrable final 
         pour mieux répondre aux besoins du client. 
 
-5.	Expliquer la méthode MoSCoW en quelques lignes et citer ses avantages.
-6.	
-132.	A quoi sert la méthodologie MVP ? Citer les caractéristiques clés
-133.	Qu’est-ce que la planification itérative ?
-134.	Citer 3 méthodes Agiles dans le cadre d’un projet informatique
-135.	Qu’est-ce qu’une réunion de revue de projet ?
-136.	Qu’est-ce qu’un livrable dans un projet ? 
-137.	Quels sont les 3 piliers SCRUM ? Définir chacun d’entre eux
-138.	Qu’est-ce que le DevOps et quel est son objectif principal ?
-139.	Qu’est-ce que l’intégration continue ? 
-140.	Qu’est-ce que Docker ? Et en quoi est-il utile dans le cadre du DevOps ?
-141.	Qu’est-ce qu’un test unitaire ? 
-142.	Quelle est l'unité de code testée lors d'un test unitaire ?
-143.	Quelles sont les caractéristiques d'un bon test unitaire ?
-144.	Qu'est-ce qu'une assertion dans un test unitaire ?
+3.	Expliquer la méthode MoSCoW en quelques lignes et citer ses avantages.
+   
+        - La méthode MoSCoW est une technique de priorisation utilisée par les Chefs de projet pour travailler plus intelligemment.
+  	MoSCoW est un acronyme (en réalité, seuls MSCW désignent une catégorie spécifique, les « o » étant utilisés pour faciliter la prononciation). Voici ce que signifie l’acronyme MoSCoW. 
+        - M : Must have this (les initiatives qui sont essentielles à la réussite du projet. Ils sont généralement non négociables,ex. fonctionnalités). 
+        - S : Should have this if at all possible (les initiatives ne soient pas essentielles à un produit ou à un projet, elles peuvent apporter une vraie valeur ajoutée).
+        - C : Could have this if it does not affect anything else (les initiatives qui ne sont pas nécessaires au cœur d’un produit. Les projets de cette catégorie sont souvent les premiers à être dépriorisés lorsqu’un autre projet prend plus de temps que prévu.
+        - W : Won't have this time but would like in the future (plusieurs initiatives non-essentielles.Cette catégorie montre à l’équipe que le projet n’est pas une priorité à ce moment précis).
+  	
+        Voici quelques-uns des avantages de la méthode de priorisation MoSCoW : 
+        - Flexibilité lors de la hiérarchisation des tâches : La méthode MoSCoW fait la distinction entre les fonctionnalités « indispensables » et celles qui ne le sont pas.
+  	Grâce à cela, vous pouvez donner la priorité aux fonctionnalités urgentes et nécessaires pour construire le produit. Vous pouvez ensuite mettre ces dernières de côté pendant un certain temps au profit de celles qui sont moins prioritaires. 
+
+        - Transparence pendant la période de développement : La méthode MoSCoW permet à tous les acteurs clés impliqués dans le développement d’un produit de se concentrer sur une seule liste de priorités.
+  	C’est essentiel, car tout le monde comprend chaque élément « indispensable ». Avec ce niveau de transparence, les développeurs réalisent rapidement quels éléments inclure dans chaque sprint ou itération.
+  	
+        - Division des ressources : Un autre avantage de la méthode MoSCoW est une division claire de l’allocation des ressources pendant le projet. Le fait d’avoir des « Must Have » séparés des « Should Have » et des « « Could Have » permet à votre équipe 
+  	d’affecter clairement des ressources aux fonctionnalités qui sont des ajouts indispensables et d’affecter des ressources aux autres fonctionnalités possibles après les avoir déléguées aux sections indispensables.
+  	Cette répartition des ressources est essentielle lors de la gestion d’un projet complexe et aide l’ensemble de l’équipe à comprendre ses attentes et à répartir son temps.
+  	
+  	- La méthode est est efficace pour:  hiérarchiser en fonction des contraintes budgétaires; établir des priorités en fonction des compétences de l’équipe; définir des priorités en fonction des besoins concurrents de l’entreprise.
+
+4.	A quoi sert la méthodologie MVP ? Citer les caractéristiques clés.
+   
+        - Né dans la Silicon Valley, le concept fait partie de Lean Startup, une méthode agile très appréciée lors d’une création d’entreprise et par les startups. Son processus itératif agit comme un accélérateur de lancement d’un produit sur le marché,
+  	 et ce à moindre coût.La méthodologie MVP, qui signifie “Minimum Viable Product” (Produit Minimum Viable), sert à développer un nouveau produit avec suffisamment de fonctionnalités pour attirer les premiers utilisateurs
+  	et valider une idée de produit tôt dans le cycle de développement. Cela permet aux équipes de collecter des données sur les réactions des utilisateurs pour itérer et améliorer le produit.
+  	
+  	"Minimum" - répondre au besoin principal; objectif : le développement rapide du produit en diminuant le temps de dev et coûts; astuce : automatiser rapidement et sans développement certaines fonctionnalités
+  	"Viable" - mettre un MVP sur le marché, tester sa capacité à générer de la valeur; objectif :les ressources mises en œuvre pour le développement génèrent un retour sur investissement; astuce: réinvestir les revenus générés par un produit minimum
+  	"Product" MVP est une version succincte du produit fini mais il a déjà les bons stabilité technique&expérience utilisateur); objectif : cette première version doit séduire ses users; astuce : récoltez des retours utilisateurs pour la suite du dév.
+  	
+5.	Qu’est-ce que la planification itérative ?
+   
+	- Tout comme la méthode Agile, les processus itératifs  peuvent vous aider à réduire les risques, travailler plus efficacement et aborder les problèmes de manière plus souple et dynamique.
+        La planification itérative désigne la pratique qui consiste à créer, affiner et améliorer un projet, un produit ou une initiative. Les équipes créent, testent et révisent jusqu’à ce qu’elles soient satisfaites du résultat final.
+        Vous pouvez considérer le processus itératif comme une méthode essai-erreur qui rapproche votre projet de son objectif final. La méthodologie Lean et la gestion de projet Agile intègrent ces processus itératifs, absolument essentiels.
+        Opter pour la planification itérative implique d’améliorer constamment la conception, produit ou projet jusqu’à ce votre équipe soit satisfaite du livrable final.
+        Dans un processus autre qu’itératif, l'équipe cherche à concevoir son produit final sans tester de nouvelles idées en cours de route. Les démarches qui ne sont pas itératives connaissent des phases de conceptualisation et de création plus longues.
+        
+6.	Citer 3 méthodes Agiles dans le cadre d’un projet informatique.
+	1) Scrum est un cadre dans lequel les gens peuvent résoudre des problèmes adaptatifs complexes, tout en fournissant de manière productive et créative des produits de la plus haute valeur possible.L’équipe de développement découpe son produit en tâches.
+        Elle devient plus agile et découvre comment réagir rapidement et répondre aux imprévus.
+    
+        2) Kanban, comme Scrum, encourage le travail à être décomposé en petites tâches.Mais plutôt que de planifier le travail dans une itération ou un Sprint, les membres de l’équipe récupèrent la tâche la plus prioritaire dans le backlog
+        qui est prête à être développée. Il repose sur un travail effectué en toute transparence et une communication en temps réel de la capacité. Les tâches sont représentées visuellement sur un tableau Kanban. Les membres de l'équipe
+        peuvent voir l'état de chaque tâche à tout moment. Un tableau Kanban est un outil de gestion de projet Agile conçu pour aider à visualiser le travail, limiter le travail en cours et maximiser l'efficacité (ou le flux).
+        Ces tableaux peuvent aider les équipes Agile et DevOps à mettre de l'ordre dans leur travail quotidien. Les tableaux Kanban ont recours à des cartes, à des colonnes et à l'amélioration continue pour aider les équipes technologiques et de service
+        à s'engager sur une quantité de travail appropriée, puis à la réalise
+
+        3) Extreme Programming (XP) est une méthode qui se concentre sur l’excellence technique et une bonne conception tout en répondant aux besoins changeants du client, elle privilége l'aspect réalisation d'une application,
+        sans négliger l'aspect gestion de projet. L'originalité de la méthode est de les pousser à l'extrême :
+        la revue de code sera faite en permanence (par un binôme) ;
+        les tests seront faits systématiquement avant chaque mise en œuvre ;
+        le code sera retravaillé tout au long du projet (refactoring ou remaniement du code) ;
+        la solution la plus simple sera toujours celle qui sera retenue ;
+        des métaphores seront définies et évolueront en concomitance ;
+        les modifications seront faites plusieurs fois par jour ;
+        des cycles de développement très rapides faciliteront l'adaptation au changement.
+	
+7.	Qu’est-ce qu’une réunion de revue de projet ?
+
+	- Une réunion de revue de projet est une rencontre organisée pour évaluer l’avancement d’un projet. Elle permet aux parties prenantes de discuter des progrès réalisés, des obstacles rencontrés et des étapes suivantes.
+        C’est un moment clé pour s’assurer que le projet reste sur la bonne voie et respecte les délais et le budget prévus.
+        Elle peut se composer, par exemple, comme suit : le commanditaire du projet, le chef de projet, l'équipe projet, des experts et/ou partenaires, un sponsor.
+        Objectifs :contrôler que les objectifs d'une étape sont bien atteints , vérifier que les échéances et délais sont respectés , valider les différentes phases du projet, gérer les incidents, problèmes ou risques éventuels, 
+        décider d'éventuels réajustements ou réorientations , déclencher un appel de fonds , mais également :
+        fédérer à nouveau les acteurs autour de la réussite du projet, communiquer en face à face, renforcer l'intelligence collective , favoriser la coopération entre les différents protagonistes, donner une vision globale, unique et précise du projet
+        à chacune des parties en présence.
+        Plusieurs types de revues de projet, parmi lesquels :
+        Comité de pilotage : composé de dirigeants opérationnels dans la maîtrise d'ouvrage du projet, il permet de chapeauter le projet dans sa globalité : constitution de l'équipe, désignation du chef de projet, définition des phases, échéances
+        et diverses réunions de suivi, validation des étapes, prise de décision, etc.
+        Revue budgétaire : implémentée dans le cadre de la gestion budgétaire, elle permet le contrôle et le suivi des dépenses et recettes : suivi des écarts, révisions, réajustements, prévisions. 
+        Revue de sprint : dans le cadre de projets agiles , elle se tient à la fin de chaque sprint et permet de présenter ce qui a été développé au cours du sprint écoulé, faire un point sur l'avancée du projet, valider ou réadapter les options.
+        Revue de fabrication : dans le cadre de la fabrication d'un nouveau produit, elle permet d'en valider toutes les étapes, faire les ajustements éventuels, valider la conformité, etc.
+	Déroulement de ce type de réunion: préparation;  invitation; conduite de la réunion; précision, concision et positivité; conclusion; compte-rendu; dossier de revue de projet; suivi.
+
+8.	Qu’est-ce qu’un livrable dans un projet ?
+
+        - La conduite d'un projet débouche sur un produit, un service, etc. Cette finalité, appelée "livrable", est le résultat tangible d'une production réelle, appréhendable, mesurable attendue par le client final.
+  	Un projet peut, bien sûr, avoir plusieurs livrables.
+  	
+9.	Quels sont les 3 piliers SCRUM ? Définir chacun d’entre eux
+	
+        -Les trois piliers de Scrum sont:
+        1) Transparence : les faits sont présentés tels qu'ils sont à toutes les parties prenantes qui sont concernées directement ou indirectement.
+        2)Inspection : le travail est vérifié au fur et à mesure pour éviter de devoir refaire deux fois la même chose.
+        3)Adaptation : l'équipe Scrum s'adapte continuellement au projet, à son contexte, et à ce qu'elle apprend en cours de route grâce à l'empirisme.
+
+11.	Qu’est-ce que le DevOps et quel est son objectif principal ?
+12.	Qu’est-ce que l’intégration continue ? 
+13.	Qu’est-ce que Docker ? Et en quoi est-il utile dans le cadre du DevOps ?
+14.	Qu’est-ce qu’un test unitaire ? 
+15.	Quelle est l'unité de code testée lors d'un test unitaire ?
+16.	Quelles sont les caractéristiques d'un bon test unitaire ?
+17.	Qu'est-ce qu'une assertion dans un test unitaire ?
 
 ------------------------------------------------------------------------------------------------------------------
 XII. English
