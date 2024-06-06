@@ -117,7 +117,8 @@ I. Général
           ou' strlen(phrase)
    
    
-11.	Qu’est-ce qu’une session ? Quelle fonction permet de démarrer une session en PHP ? Donner un exemple d’utilisation en PHP
+11.	Qu’est-ce qu’une session ? Quelle fonction permet de démarrer une session en PHP ? 
+        Donner un exemple d’utilisation en PHP
 
 	- Une session est démarrée par session_start() en PHP. Elle peut être utilisée pour recueillir des informations sur les actions
         de l'utilisateur pour lui renvoyer des données personnalisée à travers la superglobale $_SESSION, comme des notifications après
@@ -214,7 +215,8 @@ II. Front-end
         - C'est utilisé pour la communication asynchrone : envoyer des requêtes vers le serveur et déclencher des opérations
    	  lors de la réception de réponses de celui-ci.
    	
-9.	Quel sélecteur CSS permet de sélectionner tous les éléments d’une classe spécifique ? D’un identifiant spécifique ?
+9.	Quel sélecteur CSS permet de sélectionner tous les éléments d’une classe spécifique ? 
+        D’un identifiant spécifique ?
     
 	 - "." pour sélectionner une classe et "#" pour un identifiant
            (C'est le sélecteur de classe : ".nomclasse {}" ; ou le sélecteur d'identifiant : "#valeurid {}").
@@ -276,7 +278,8 @@ II. Front-end
           Il contient des codes HTML et CSS, des formulaires, boutons... Il existe de nombreux équivalent, notamment :
           Tailwind CSS, Bulma, Materialize, Foundation by Zurb, Skeleton...
   
-17.	Quand un formulaire HTML est créé, quelles sont les 2 méthodes qui peuvent lui être associées ? Donner la différence entre ces 2 méthodes.
+17.	Quand un formulaire HTML est créé, quelles sont les 2 méthodes qui peuvent lui être associées ?
+        Donner la différence entre ces 2 méthodes.
 	
    	L'attribut "method" définit la méthode HTTP qui sera utilisée pour envoyer les données au serveur, il peut prendre les valeurs suivantes :
         POST : la méthode POST, utilisée pour envoyer des données au serveur ; les paramètres (données saisies par l'utilisateur) sont passés
@@ -359,7 +362,8 @@ IV. Programmation orientée objet (POO)
         - Propriété / Attribut : c'est un élément de description d'un objet, les caractéristiques (variables dites définies ou déclarées) d'un objet d'une classe. 
           Méthode : ce sont les fonctions (dites définies ou déclarées) à l'intérieur d'une classe.
   		
-5.	Qu’est-ce que la visibilité d’une propriété ou d’une méthode ? Citer les différents types de visibilité
+5.	Qu’est-ce que la visibilité d’une propriété ou d’une méthode ? 
+        Citer les différents types de visibilité
    
         - La visibilité permet de définir comment une propriété ou une méthode pourra être utilisée, les différents types de visibilité sont : 
           - public : permet d'indiquer que la propriété ou la méthode sera accessible à l'intérieur mais aussi à l'extérieur de la classe,
@@ -536,7 +540,8 @@ VI. Modélisation - Base de données
         - C'est une représentation structurée et normalisée des données d'un système d'information,
   	  conçue pour être directement implémentable dans une base de données relationnelle.
   	
-5.	Donner la définition des mots suivants : a.Entité; b.Relation; c.Cardinalité; d.Clé primaire / clé étrangère
+5.	Donner la définition des mots suivants : 
+        a.Entité; b.Relation; c.Cardinalité; d.Clé primaire / clé étrangère
    
         - a. Entité : Une entité est un objet ou un concept identifiable qui peut être représenté dans une base de données. Exemple : 'Livre' et 'Auteur'
         - b. Relation : Une relation c'est une association entre les différentes entités. Elle représente la manière
@@ -561,7 +566,8 @@ VI. Modélisation - Base de données
         - c. SGBD (donner 2 exemples de SGBD) : Système de gestion de base de données, c'est un logiciel système permettant aux utilisateurs et programmeurs
   	  de créer et de gérer des bases de données, exemple : MySQL, Oracle et SQL Server.
   	
-9.	Dans une base de données, les données sont stockées dans des ___. Celles-ci sont constituées de lignes appelées ___ et de colonnes appelées ___
+9.	Dans une base de données, les données sont stockées dans des ___.
+        Celles-ci sont constituées de lignes appelées ___ et de colonnes appelées ___
 
         - xxx
   	
@@ -626,7 +632,8 @@ VII. Symfony
    	  Il est simple à utiliser et a une bonne capacité à séparer efficacement la logique de présentation de la logique métier dans les applications web.
    	
 89.	Qu’est-ce qu’un ORM ? Quel est son utilité et comment s’appelle-t-il au sein de Symfony ?
-90.	Qu’est-ce que l’injection de dépendances ? Quel est l’outil utilisé dans ce contexte et quel fichier contient l’intégralité des dépendances du projet ?
+90.	Qu’est-ce que l’injection de dépendances ? 
+        Quel est l’outil utilisé dans ce contexte et quel fichier contient l’intégralité des dépendances du projet ?
 91.	Que permet le bundle Maker au sein de Symfony ? 
 92.	Quel est le langage de requêtage exploité au sein d’un projet Symfony ?
 93.	Quel est le composant qui garantit l’authentification et l’autorisation des utilisateurs ?
@@ -638,7 +645,8 @@ VIII. Sécurité
 95.	Qu’est-ce que la faille XSS ? Comment s’en prémunir ?
 96.	Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
 97.	Définir l’attaque par force brute et l’attaque par dictionnaire
-98.	Existe-t-il d’autres failles de sécurité ? Citer celles-ci et expliquer simplement leur comportement
+98.	Existe-t-il d’autres failles de sécurité ? 
+        Citer celles-ci et expliquer simplement leur comportement
 99.	A quoi servent l’authentification et l’autorisation dans un contexte d’application web ?
 100.	Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
 101.	Qu’est-ce qu’une politique de mots de passe forts ?
@@ -693,7 +701,8 @@ X. SEO
   	  donc de ne pas le prendre en compte pour le référencement naturel du site.
   	
 8.	Quelle est l'importance du contenu de qualité pour le référencement d'un site web ?
-9.	Pourquoi est-il important d'utiliser des balises de titre (h1, h2, h3, etc.) de manière structurée ?
+9.	Pourquoi est-il important d'utiliser des balises de titre (h1, h2, h3, etc.)
+        de manière structurée ?
 10.	Quelle est la recommandation pour les URL d'un site web bien référencé ?
 11.	Qu'est-ce que le maillage interne et pourquoi est-il important pour le référencement ?
 12.	Qu'est-ce que l'optimisation des images pour le référencement ?
