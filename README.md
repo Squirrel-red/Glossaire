@@ -316,7 +316,8 @@ III. UX UI
   	
 5.	Qu’est-ce que l’accessibilité en UX Design ?
 
-        xxx
+       L'accessibilité permet à toutes les personnes, y compris celles ayant des limitations physiques, sensorielles ou cognitives, d'utiliser des produits numériques sans obstacles.
+  	Cela promeut l'équité et l'inclusion, assurant que personne ne soit exclu de l'utilisation de vos services.
   	
 6.	Qu’est-ce qu’une grille de mise en page ?
    
