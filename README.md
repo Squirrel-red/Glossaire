@@ -443,7 +443,8 @@ IV. Programmation orientée objet (POO)
 15.	Qu’est-ce qu’un « autoload » ?
     
 	- C'est une fonction qui va aller chercher toutes les classes existantes dans les autres fichiers php :
-          spl_autoload_register(function ($class_name) {   require 'classes/'. $class_name .'.php';}   );
+          spl_autoload_register(function ($class_name) {
+             require 'classes/'. $class_name .'.php';}   );
         
 16.	Comment appelle-t-on en français les « getters » et les « setters » ?
     
@@ -454,7 +455,16 @@ IV. Programmation orientée objet (POO)
    	
 17.	Qu’est-ce que la sérialisation en PHP ?
 
-        xxx
+        La sérialisation permet de stocker dans une variable des données complexes comme un tableau ou un objet, sous forme de chaines de caractères.
+   	C'est utilisé afin de les stocker en base de données (par exemple). Ex :
+
+        $data = array("name" => "John", "age" => 30, "city" => "New York");
+        $serialized_data = serialize($data);
+        echo $serialized_data;
+        On peut ensuite les désérialiser afin de retrouver l'objet / tableau d'origine.
+
+        $original_data = unserialize($serialized_data);
+        print_r($original_data);
    	
 ----------------------------------------------------------------------------------------------------------------------
 V. Architecture 
@@ -462,20 +472,32 @@ V. Architecture
 1.	Qu’est-ce que l’architecture client / serveur ? Grâce à quel type de requête peut-on interroger le serveur.
          Définir l’acronyme de ce type de requête. Si on ajoute un « S » à cet acronyme, expliquer la différence
 
-	  xxx
+	 Dans l'architecture serveur / client, on distingue les deux entités comme suit :
+         Le client envoie des requêtes au serveur.
+         Le serveur reçoit les requêtes du client, effectue des opérations demandées et renvoie les résultats au client.
+         Le client traite les réponses.
+         Pour interroger le serveur, on envoie des requêtes "HTTP" (Hypertext Transfer Protocol).
+         Avec un "S", HTTPS devient "Hypertext Transfer Protocol Secure". La différence est que cette version est plus sécurisée en ajoutant une couche de sécurité avec des chiffrements 
+         pour éviter que les données passantes entre le serveur et le client ne soient interceptées.
   	
 2.	Donner la définition d’un design pattern. Citer au moins 3 exemples de design pattern.
    
-	- Un design pattern est un patron d'architecture ce qui permet quelques avantages :
+	- Un design pattern est un patron d'architecture, ne solution réutilisable  qui permet  avoir quelques avantages :
           respecter des méthodes de conception professionnellement reconnues ;
           développer plus rapidement en suivant des modèles architecturaux ayant fait elurs prevues ;
           permettre au code d'être relu plus facilement par un autre développeur sensibilisé aux pattenrs utilisés.
           Exemple : Factory, Composite, Iterator, Observer, Singleton, Strategy, Template.
    
+          Singleton : Assure qu'une classe n'a qu'une seule instance et fournit un point d'accès global à cette instance.
+          Observer : Permet à un objet de notifier d'autres objets lorsqu'un changement d'état se produit.
+          Factory : Définit une interface pour créer des objets, mais laisse aux sous-classes le soin de décider quelle classe instancier.
+   
 3.	Qu’est-ce que l’architecture MVC ?
    
         - C'est un patron de conception concernant l'agencement du code, segmenté en trois sections :
    	  modèle, vue, controlleur.
+  	 - L'architecture MVC est une façon d'organiser le code pour séparer les différentes responsabilités d'une application web.
+          Cela permet d'avoir un code plus clair et plus facile à maintenir.
 	
 4.	Quel est le rôle de chaque couche du design pattern MVC : Model, View, Controller ?
    
@@ -498,7 +520,8 @@ V. Architecture
   	
 5.	Quels sont les avantages de l’architecture MVC ?
 
-         xxx
+        - Séparation des responsabilités : Chaque couche a un rôle spécifique, ce qui rend le code plus clair et plus organisé.
+          Facilité de maintenance : Il est plus facile de modifier une partie de l'application sans affecter les autres parties.
   	
 6.	Existe-t-il des variantes à l’architecture MVC ?
    
@@ -514,6 +537,13 @@ V. Architecture
   	   L'architecture REST (Representational State Transfer) définit les principes REST par 4 contrôles d'interface,
   	   notamment l'identification des ressources, la gestion des ressources via des représentations,
   	   l'activation des communications autodescriptives et la transformation de l'hypermédia en moteur de l'état de l'application.
+
+         Autre réponse plus précise:
+  	  - API (Application Programming Interface) : Une API est un ensemble de règles qui permet à des applications de communiquer entre elles.
+          - C'est comme un traducteur qui permet à différents logiciels de se parler.
+          - Architecture REST (Representational State Transfer) : REST est un style d'architecture pour les API web.
+          - Il utilise des méthodes HTTP standard comme GET, POST, PUT et DELETE pour effectuer des opérations sur les ressources.
+          -  Les ressources sont identifiées par des URL, et les opérations sont réalisées de manière stateless, ce qui signifie que chaque requête est indépendante des autres.
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 VI. Modélisation - Base de données
@@ -544,131 +574,227 @@ VI. Modélisation - Base de données
 5.	Donner la définition des mots suivants : 
         a.Entité; b.Relation; c.Cardinalité; d.Clé primaire / clé étrangère
    
-        - a. Entité : Une entité est un objet ou un concept identifiable qui peut être représenté dans une base de données. Exemple : 'Livre' et 'Auteur'
-        - b. Relation : Une relation c'est une association entre les différentes entités. Elle représente la manière
-  	   dont les données sont liées les unes aux autres. Exemple : 'Livre' et 'Auteur', un livre est écrit par un auteur.
+        - a. Entité : Une entité est un objet ou un concept identifiable qui peut être représenté dans une base de données. Exemple : 'Livre' et 'Auteur'.
+  	Elle exprime une personne / chose / lieu / (une classe). "Ensemble d'informations à traiter"
+
+  	b. Relation : Association relative entre les entités, relation qu'il y a entre elles. (porte bien son nom)
+  	
         - c. Cardinalité : Sert à compter le nombre minimum et maximum de possibilités que chaque classe contient dans la relation liant deux ou plusieurs objets.
-        - d. Clé primaire : garanti l'unicité d'un enregistrement dans une table;
-           Clé étrangère : garanti le lien avec une autre table.
+  	C'est la  relativité entre les entités, précisant le lien et la quantité minimale et maximale qu'une entité puisse avoir d'une autre entité.
+  	
+        - d. Clé primaire : garanti l'unicité d'un enregistrement dans une table; identifiant unique d'une entité
+           Clé étrangère : garanti le lien avec une autre table; valeur récupérée de l'identifiant d'une autre entité.
            Clé primaire dans table associative : c'est l'association des clés étrangères qui fait que la table associatve est la clé primaire.
   	
 6.	Que devient une relation de type « Many To Many » dans le modèle logique de données ?
 
-	 xxx
+         - elle devient une nouvelle table intermédiaire (table de liaison) entre ces entités, et portant les clés étrangères des entités en question
    
 7.	Qu’est-ce qu’une base de données ?
    
-        - Une base de données est un outil qui permet de collecter et d'organiser des informations.
+        - Une base de données est un système organisé qui permet de stocker, gérer et récupérer des informations.
+  	Elle contient des collections de données structurées de manière à faciliter leur accès, leur gestion et leur mise à jour.
   	
 8.	Définir les notions suivantes : a. SQL b.MySQL c.SGBD (donner 2 exemples de SGBD)
    
         - a. SQL : Structured Query Language, c'est un langage informatique normalisé servant à exploiter des bases de données relationnelles.
-        - b. MySQL : MySQL est un système de gestion de bases de données relationnelles.
+        - b. MySQL : MySQL est un système de gestion de bases de données (SGBD) relationnelles.
         - c. SGBD (donner 2 exemples de SGBD) : Système de gestion de base de données, c'est un logiciel système permettant aux utilisateurs et programmeurs
   	  de créer et de gérer des bases de données, exemple : MySQL, Oracle et SQL Server.
   	
 9.	Dans une base de données, les données sont stockées dans des ___.
         Celles-ci sont constituées de lignes appelées ___ et de colonnes appelées ___
 
-        - xxx
+        - Dans une base de données, les données sont stockées dans des tables.
+  	Celles-ci sont constituées de lignes appelées enregistrements et de colonnes appelées champs.
   	
 10.	Quelle est la différence entre une base de données relationnelle et non relationnelle ?
 
-   	- xxx
+   	- Base de données relationnelle : Organise les données en tables avec des relations entre elles (clés primaires / clés étrangères).
+   	Les données sont structurées de manière rigide et on utilise SQL pour les manipuler.
+        - Base de données non relationnelle : Organise les données sous forme de documents, de paires clé-valeur (comme JSON) ou de graphes.
+          Elles sont plus flexibles et peuvent gérer des types de données variés sans suivre de règles strictes.
    	
 11.	Qu’est-ce qu’une jointure dans une base de données ? En existe-t-il plusieurs ? Si oui lesquelles ?
 
-        - xxx
+        - Une jointure est une opération en SQL qui permet de combiner des lignes de deux ou plusieurs tables en fonction d'une condition commune:
+
+          * INNER JOIN : Retourne les lignes où il y a une correspondance dans les deux tables.
+          * LEFT JOIN : Retourne toutes les lignes de la table de gauche, et les lignes correspondantes de la table de droite, ou NULL si aucune correspondance n'est trouvée.
+          * RIGHT JOIN : Retourne toutes les lignes de la table de droite, et les lignes correspondantes de la table de gauche, ou NULL si aucune correspondance n'est trouvée.
+          * FULL JOIN : Retourne toutes les lignes lorsqu'il y a une correspondance dans une des tables.
+   	
 12.	A quoi sert une vue dans une base de données ?
 
-	-xxx
+	-Pour des raisons de rapidité d’accès et de simplification, il existe les vues.
+        Les vues sont des requêtes préparées à l’avance dont les paramètres (mais pas les résultats) sont stockés dans la base de données.
+   	Les interrogations complexes sont ainsi optimisées : en enregistrant un modèle plutôt qu’en le préparant de A à  Z à chaque fois,
+   	l’utilisateur va plus vite et fait moins d’erreurs.
+   	Concrètement, la base de données stocke la requête qui peut ensuite être appelée (une vue a un nom) et exécutée.
+   	Grâce à ce nom, on peut ensuite les utiliser tels des tables dans les requêtes.
+   	C’est pratique, rapide et génère des requêtes plus lisibles tout en masquant la complexité sous-jacente.
+   	Les vues ont d’autres caractéristiques :
+
+        Une vue peut masquer certaines données. Étant une requête, la vue n’affiche que les informations souhaitées.
+   	Elle permet ainsi d’extraire des données choisies et de masquer des données non souhaitées.
+        Certains SGBD permettent de stocker les résultats des vues et peuvent faire office de mémoire tampon (cache).
+        Les vues ne prennent pas de place. C’est la requête qui est enregistrée (pas le résultat).
+        On peut réaliser des regroupements de données (somme, moyenne…) qui peuvent être réutilisés très facilement.
+        Les vues sont habituellement en lecture seule (d’ou le terme de « vue ») mais dans certains systèmes et sous certains conditions, on peut manipuler les données d’une vue.
+   	
+         *** Création d’une vue SQL ***
+        CREATE VIEW ToutesLesFactures AS 
+        SELECT fac_id, fac_ref, cli_nom
+        FROM facture, client 
+        WHERE facture.cli_id = client.cli_id ;
+   	
+        *** Utilisation d’une vue SQL ***
+        Plutôt que de retaper la requête ci-dessus avec sa jointure, on peut directement appeler la vue :
+
+        SELECT * FROM ToutesLesFactures ; 
+
+        Une base de données n’a pas besoin d’interface graphique pour fonctionner. Et c’est très perturbant lorsque l’on débute avec ces outils.
+   	Alors il existe des outils variés qui permettent de représenter la structure d’une base de données (le MCD de Merise) et les données qui se trouvent à l’intérieur
+   	(PhpMyAdmin pour MySql par exemple). Mais cela ne suffit pas et ne doit pas être confondu avec les vues.
 
 13.	Qu’est-ce que l’intégrité référentielle dans une base de données ?
-        -xxx
+        -L'intégrité référentielle garantit que les relations entre les tables restent cohérentes.
+   	Par exemple, si une table contient une clé étrangère reliant à une autre table, l'intégrité référentielle assure
+   	que cette clé étrangère correspond à une clé primaire valide dans la table liée.
    	
 14.	Quelles sont les fonctions d’agrégation en SQL ?
 
-        -xxx
+        -Les fonctions d'agrégation en SQL permettent de réaliser des calculs sur un ensemble de valeurs et de retourner une valeur unique. Exemples :
+
+        COUNT() : Compte le nombre de lignes.
+        SUM() : Calcule la somme des valeurs.
+        AVG() : Calcule la moyenne des valeurs.
+        MAX() : Retourne la valeur maximale.
+        MIN() : Retourne la valeur minimale.
+   	
 15.	Qu’est-ce qu’un CRUD dans le contexte d’une base de données ?
 
-        -xxx
+        -CRUD est un acronyme pour les quatre opérations de base qu'on peut réaliser sur les données dans une base de données :
+
+           Create (Créer) : Ajouter de nouvelles données.
+           Read (Lire) : Lire ou récupérer des données existantes.
+           Update (Mettre à jour) : Modifier des données existantes.
+           Delete (Supprimer) : Effacer des données existantes.
    	
 16.	Quelles sont les clauses qui permettent de :
         a.	Insérer un nouvel enregistrement dans une table
+
+   	INSERT INTO table (key1, key2, key3)
+        VALUES (valeur1, valeur2, valeur3)
+   	
         b.	Modifier un enregistrement dans une table
+
+   	UPDATE table
+        SET key = valeur, key = valeur, ...
+        WHERE ...
+   	
         c.	Supprimer un enregistrement dans une table
+
+   	DELETE FROM table 
+        WHERE ...
+   	
         d.	Supprimer la base de données
+
+   	DROP DATABASE nom_DB
+   	
         e.	Filtrer les résultats d’une requête SQL
+
+   	SELECT colonne1, colonne2, ...
+        FROM table
+        WHERE ...;
+   	
         f.	Trier les résultats d’une requête SELECT
+
+   	ORDER BY colonne ( DESC/ASC, colonne2 DESC/ASC )
+   	
         g.	Regrouper les résultats d'une requête SELECT en fonction d'une colonne spécifique
+
+   	SELECT colonne1, COUNT(colonne2)/SUM(colonne2)
+        FROM table
+        GROUP BY colonne1;
+   	
         h.	Concaténer 2 chaînes de caractères
 
-        -xxx
+        -SELECT CONCAT(blabla1, blabla2) AS blablabla
    	
-197.	Comment se connecter à une base de données en PHP ? Quelle est la classe native utilisée ?
+17.	Comment se connecter à une base de données en PHP ? Quelle est la classe native utilisée ?
 
-	-xxx
+	-La classe native utilisée est PDO.
+        On créait donc un nouvel objet PDO en renseignant serveur, nom de la bdd, et toute information encore nécessaire à la connexion.
 
 ---------------------------------------------------------------------------------------------------------------------------
 VII. Symfony
 --------------------------------------------------------------------------------------------------------------------------
-84.	Qu’est-ce que Symfony ?
+1.	Qu’est-ce que Symfony ?
         - Symfony est un framework PHP "open source" utilisé par les développeurs pour créer
    	  des sites ou applications web complexes, robustes, fiables, évolutifs, maintenables et performants.
    	
-85.	Sur quel langage de programmation et design pattern repose Symfony ?
+2.	Sur quel langage de programmation et design pattern repose Symfony ?
 	 - Le langage de programmation sur lequel repose Symfony est le PHP.
            Le design pattern sur lequel repose Symfony est le modèle de conception MVC (Modèle-Vue-Contrôleur).
            Les données de l'application (le modèle) sont séparées de l'interface utilisateur (la vue) et de la logique de contrôle (le contrôleur),
            ce qui permet une meilleure organisation du code et une meilleure maintenabilité de l'application.
     
-86.	Quelle est la dernière version en date de Symfony ?
+3.	Quelle est la dernière version en date de Symfony ?
 	 - La dernière version en date de Symfony est là 7.0.5 (Stable Release, 6.4.5 pour la LTS (Long-Term Support)).
     
-87.	Qu’est-ce qu’un bundle ?
+4.	Qu’est-ce qu’un bundle ?
         - Un bundle est une offre groupée, un ensemble de produits vendus ensemble.
    	
-88.	Quel est le moteur de template utilisé par défaut dans Symfony ?
+5.	Quel est le moteur de template utilisé par défaut dans Symfony ?
         - Le moteur de template par défaut est Twig. c'est un moteur de template flexible, rapide et sécurisé, spécialement conçu pour être utilisé avec PHP.
    	  Il est simple à utiliser et a une bonne capacité à séparer efficacement la logique de présentation de la logique métier dans les applications web.
    	
-89.	Qu’est-ce qu’un ORM ? Quel est son utilité et comment s’appelle-t-il au sein de Symfony ?
-90.	Qu’est-ce que l’injection de dépendances ? 
+6.	Qu’est-ce qu’un ORM ? Quel est son utilité et comment s’appelle-t-il au sein de Symfony ?
+7.	Qu’est-ce que l’injection de dépendances ? 
         Quel est l’outil utilisé dans ce contexte et quel fichier contient l’intégralité des dépendances du projet ?
-91.	Que permet le bundle Maker au sein de Symfony ? 
-92.	Quel est le langage de requêtage exploité au sein d’un projet Symfony ?
-93.	Quel est le composant qui garantit l’authentification et l’autorisation des utilisateurs ?
+8.	Que permet le bundle Maker au sein de Symfony ? 
+9.	Quel est le langage de requêtage exploité au sein d’un projet Symfony ?
+10.	Quel est le composant qui garantit l’authentification et l’autorisation des utilisateurs ?
     
 ------------------------------------------------------------------------------------------------------------------------
 VIII. Sécurité
 ------------------------------------------------------------------------------------------------------------------------
-94.	Qu’est-ce que l’injection SQL ? Comment s’en prémunir ?
-95.	Qu’est-ce que la faille XSS ? Comment s’en prémunir ?
-96.	Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
-97.	Définir l’attaque par force brute et l’attaque par dictionnaire
-98.	Existe-t-il d’autres failles de sécurité ? 
+1.	Qu’est-ce que l’injection SQL ? Comment s’en prémunir ?
+
+        - Elle consiste à faire de l'insertion de code SQL non autorisé dans des requêtes SQL afin d'avoir accès à la base de données.
+  	On s'en défend en utilisant prepare(), puis execute() afin de préparer un moule non modifiable de la requête SQL avant de l'exécuter
+  	 en y insérant des variables qui seront au préalable filtrées.
+   	
+2.	Qu’est-ce que la faille XSS ? Comment s’en prémunir ?
+
+        - La faille XSS consiste à injecter du script dans les pages web.
+  	
+3.	Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
+4.	Définir l’attaque par force brute et l’attaque par dictionnaire
+5.	Existe-t-il d’autres failles de sécurité ? 
         Citer celles-ci et expliquer simplement leur comportement
-99.	A quoi servent l’authentification et l’autorisation dans un contexte d’application web ?
-100.	Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
-101.	Qu’est-ce qu’une politique de mots de passe forts ?
-102.	Qu’est-ce que l’hameçonnage ?
-103.	Définir la « validation des entrées »
+6.	A quoi servent l’authentification et l’autorisation dans un contexte d’application web ?
+7.	Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
+8.	Qu’est-ce qu’une politique de mots de passe forts ?
+9.	Qu’est-ce que l’hameçonnage ?
+10.	Définir la « validation des entrées »
 
 -----------------------------------------------------------------------------------------------------------------------
 IX. RGPD
 ------------------------------------------------------------------------------------------------------------------------
-104.	Qu’est-ce que le RGPD ?
+1.	Qu’est-ce que le RGPD ?
         - C'est le Règlement Général de la Protection des Données.
           
-106.	Quel est son objectif principal ?
-107.	Quelle est la date d’entrée en vigueur du RGPD ?
-108.	Quelles sont les sanctions possibles en cas de non-respect du RGPD ?
-109.	En France, quel est l’autorité administrative qui s’occupe de faire appliquer le RGPD ?
-110.	Quel est le consentement valide selon le RPGD ?
-111.	Qu’est-ce qu’une politique de confidentialité ?
-112.	Quelle est la durée de conservation maximale des données personnelles selon le RGPD ?
-113.	Quels sont les droits des utilisateurs selon le RGPD ?
-114.	Qu’est-ce que le principe de minimisation des données selon le RGPD ?
+2.	Quel est son objectif principal ?
+3.	Quelle est la date d’entrée en vigueur du RGPD ?
+4.	Quelles sont les sanctions possibles en cas de non-respect du RGPD ?
+5.	En France, quel est l’autorité administrative qui s’occupe de faire appliquer le RGPD ?
+6.	Quel est le consentement valide selon le RPGD ?
+7.	Qu’est-ce qu’une politique de confidentialité ?
+8.	Quelle est la durée de conservation maximale des données personnelles selon le RGPD ?
+9.	Quels sont les droits des utilisateurs selon le RGPD ?
+10.	Qu’est-ce que le principe de minimisation des données selon le RGPD ?
 
 -------------------------------------------------------------------------------------------------------------------------
 X. SEO
@@ -729,7 +855,7 @@ XI. Gestion de projets - DevOps
   	une amélioration et une itération continues à chaque étape.  Une fois le travail commencé, les équipes suivent un processus de
   	planification, d'exécution et d'évaluation, qui permet de modifier facilement le livrable final  pour mieux répondre aux besoins du client. 
 
-4.	Expliquer la méthode MoSCoW en quelques lignes et citer ses avantages.
+3.	Expliquer la méthode MoSCoW en quelques lignes et citer ses avantages.
    
         - La méthode MoSCoW est une technique de priorisation utilisée par les Chefs de projet pour travailler plus intelligemment.
   	MoSCoW est un acronyme (en réalité, seuls MSCW désignent une catégorie spécifique, les « o » étant utilisés pour faciliter la prononciation).
@@ -745,8 +871,10 @@ XI. Gestion de projets - DevOps
   	Grâce à cela, on peux donner la priorité aux fonctionnalités urgentes et nécessaires pour construire le produit.
   	Vous pouvez ensuite mettre ces dernières de côté pendant un certain temps au profit de celles qui sont moins prioritaires. 
 
-        - Transparence pendant la période de développement : MoSCoW permet à tous les acteurs clés impliqués dans le développement d’un produit de se concentrer sur une seule liste de priorités.
-  	C’est essentiel, car tout le monde comprend chaque élément « indispensable ». Avec ce niveau de transparence, les développeurs réalisent rapidement quels éléments inclure dans chaque sprint ou itération.
+        - Transparence pendant la période de développement : MoSCoW permet à tous les acteurs clés impliqués dans le développement d’un produit de se concentrer
+  	sur une seule liste de priorités.
+  	C’est essentiel, car tout le monde comprend chaque élément « indispensable ». Avec ce niveau de transparence, les développeurs réalisent rapidement
+  	quels éléments inclure dans chaque sprint ou itération.
   	
         - Division des ressources : Un autre avantage de MoSCoW est une division claire de l’allocation des ressources pendant le projet.
   	Le fait d’avoir des « Must Have » séparés des « Should Have » et des « « Could Have » permet à votre équipe 
@@ -757,12 +885,13 @@ XI. Gestion de projets - DevOps
   	- La méthode est est efficace pour:  hiérarchiser en fonction des contraintes budgétaires; établir des priorités en fonction des compétences de l’équipe;
         définir des priorités en fonction des besoins concurrents de l’entreprise.
 
-6.	A quoi sert la méthodologie MVP ? Citer les caractéristiques clés.
+4.	A quoi sert la méthodologie MVP ? Citer les caractéristiques clés.
    
         - Né dans la Silicon Valley, le concept fait partie de Lean Startup, une méthode agile très appréciée lors d’une création d’entreprise et par les startups.
   	Son processus itératif agit comme un accélérateur de lancement d’un produit sur le marché, et ce à moindre coût.
-  	La méthodologie MVP, qui signifie “Minimum Viable Product” (Produit Minimum Viable), sert à développer un nouveau produit avec suffisamment de fonctionnalités pour attirer les premiers utilisateurs
-  	et valider une idée de produit tôt dans le cycle de développement. Cela permet aux équipes de collecter des données sur les réactions des utilisateurs pour itérer et améliorer le produit.
+  	La méthodologie MVP, qui signifie “Minimum Viable Product” (Produit Minimum Viable), sert à développer un nouveau produit avec suffisamment
+  	de fonctionnalités pour attirer les premiers utilisateurs et valider une idée de produit tôt dans le cycle de développement.
+  	Cela permet aux équipes de collecter des données sur les réactions des utilisateurs pour itérer et améliorer le produit.
   	
   	"Minimum" - répondre au besoin principal; objectif : le développement rapide du produit en diminuant le temps de dev et coûts; astuce :
   	automatiser rapidement et sans développement certaines fonctionnalités.
@@ -771,16 +900,21 @@ XI. Gestion de projets - DevOps
   	"Product" MVP est une version succincte du produit fini mais il a déjà les bons stabilité technique&expérience utilisateur);
   	objectif : cette première version doit séduire ses users; astuce : récoltez des retours utilisateurs pour la suite du dév.
   	
-8.	Qu’est-ce que la planification itérative ?
+5.	Qu’est-ce que la planification itérative ?
    
-	- Tout comme la méthode Agile, les processus itératifs  peuvent vous aider à réduire les risques, travailler plus efficacement et aborder les problèmes de manière plus souple et dynamique.
-        La planification itérative désigne la pratique qui consiste à créer, affiner et améliorer un projet, un produit ou une initiative. Les équipes créent, testent et révisent jusqu’à ce qu’elles soient satisfaites du résultat final.
-        Vous pouvez considérer le processus itératif comme une méthode essai-erreur qui rapproche votre projet de son objectif final. La méthodologie Lean et la gestion de projet Agile intègrent ces processus itératifs, absolument essentiels.
+	- Tout comme la méthode Agile, les processus itératifs  peuvent vous aider à réduire les risques, travailler plus efficacement et aborder les problèmes
+        de manière plus souple et dynamique.
+        La planification itérative désigne la pratique qui consiste à créer, affiner et améliorer un projet, un produit ou une initiative.
+        Les équipes créent, testent et révisent jusqu’à ce qu’elles soient satisfaites du résultat final.
+        Vous pouvez considérer le processus itératif comme une méthode essai-erreur qui rapproche votre projet de son objectif final.
+        La méthodologie Lean et la gestion de projet Agile intègrent ces processus itératifs, absolument essentiels.
         Opter pour la planification itérative implique d’améliorer constamment la conception, produit ou projet jusqu’à ce votre équipe soit satisfaite du livrable final.
-        Dans un processus autre qu’itératif, l'équipe cherche à concevoir son produit final sans tester de nouvelles idées en cours de route. Les démarches qui ne sont pas itératives connaissent des phases de conceptualisation et de création plus longues.
+        Dans un processus autre qu’itératif, l'équipe cherche à concevoir son produit final sans tester de nouvelles idées en cours de route.
+        Les démarches qui ne sont pas itératives connaissent des phases de conceptualisation et de création plus longues.
         
-9.	Citer 3 méthodes Agiles dans le cadre d’un projet informatique.
-	1) Scrum est un cadre dans lequel les gens peuvent résoudre des problèmes adaptatifs complexes, tout en fournissant de manière productive et créative des produits de la plus haute valeur possible.
+6.	Citer 3 méthodes Agiles dans le cadre d’un projet informatique.
+	1) Scrum est un cadre dans lequel les gens peuvent résoudre des problèmes adaptatifs complexes, tout en fournissant de manière productive
+        et créative des produits de la plus haute valeur possible.
         L’équipe de développement découpe son produit en tâches.
         Elle devient plus agile et découvre comment réagir rapidement et répondre aux imprévus.
     
@@ -804,42 +938,85 @@ XI. Gestion de projets - DevOps
         les modifications seront faites plusieurs fois par jour ;
         des cycles de développement très rapides faciliteront l'adaptation au changement.
 	
-10.	Qu’est-ce qu’une réunion de revue de projet ?
+7.	Qu’est-ce qu’une réunion de revue de projet ?
 
-	- Une réunion de revue de projet est une rencontre organisée pour évaluer l’avancement d’un projet. Elle permet aux parties prenantes de discuter des progrès réalisés, des obstacles rencontrés et des étapes suivantes.
+	- Une réunion de revue de projet est une rencontre organisée pour évaluer l’avancement d’un projet. Elle permet aux parties prenantes de discuter des progrès réalisés,
+        des obstacles rencontrés et des étapes suivantes.
         C’est un moment clé pour s’assurer que le projet reste sur la bonne voie et respecte les délais et le budget prévus.
         Elle peut se composer, par exemple, comme suit : le commanditaire du projet, le chef de projet, l'équipe projet, des experts et/ou partenaires, un sponsor.
-        Objectifs :contrôler que les objectifs d'une étape sont bien atteints , vérifier que les échéances et délais sont respectés , valider les différentes phases du projet, gérer les incidents, problèmes ou risques éventuels, 
+        Objectifs :contrôler que les objectifs d'une étape sont bien atteints , vérifier que les échéances et délais sont respectés , valider les différentes phases du projet,
+        gérer les incidents, problèmes ou risques éventuels, 
         décider d'éventuels réajustements ou réorientations , déclencher un appel de fonds , mais également :
-        fédérer à nouveau les acteurs autour de la réussite du projet, communiquer en face à face, renforcer l'intelligence collective , favoriser la coopération entre les différents protagonistes, donner une vision globale, unique et précise du projet
+        fédérer à nouveau les acteurs autour de la réussite du projet, communiquer en face à face, renforcer l'intelligence collective ,
+        favoriser la coopération entre les différents protagonistes, donner une vision globale, unique et précise du projet
         à chacune des parties en présence.
         Plusieurs types de revues de projet, parmi lesquels :
-        Comité de pilotage : composé de dirigeants opérationnels dans la maîtrise d'ouvrage du projet, il permet de chapeauter le projet dans sa globalité : constitution de l'équipe, désignation du chef de projet, définition des phases, échéances
+        Comité de pilotage : composé de dirigeants opérationnels dans la maîtrise d'ouvrage du projet, il permet de chapeauter le projet dans sa globalité :
+        constitution de l'équipe, désignation du chef de projet, définition des phases, échéances
         et diverses réunions de suivi, validation des étapes, prise de décision, etc.
-        Revue budgétaire : implémentée dans le cadre de la gestion budgétaire, elle permet le contrôle et le suivi des dépenses et recettes : suivi des écarts, révisions, réajustements, prévisions. 
-        Revue de sprint : dans le cadre de projets agiles , elle se tient à la fin de chaque sprint et permet de présenter ce qui a été développé au cours du sprint écoulé, faire un point sur l'avancée du projet, valider ou réadapter les options.
-        Revue de fabrication : dans le cadre de la fabrication d'un nouveau produit, elle permet d'en valider toutes les étapes, faire les ajustements éventuels, valider la conformité, etc.
-	Déroulement de ce type de réunion: préparation;  invitation; conduite de la réunion; précision, concision et positivité; conclusion; compte-rendu; dossier de revue de projet; suivi.
+        Revue budgétaire : implémentée dans le cadre de la gestion budgétaire, elle permet le contrôle et le suivi des dépenses et recettes :
+        suivi des écarts, révisions, réajustements, prévisions. 
+        Revue de sprint : dans le cadre de projets agiles , elle se tient à la fin de chaque sprint et permet de présenter ce qui a été développé au cours du sprint écoulé,
+        faire un point sur l'avancée du projet, valider ou réadapter les options.
+        Revue de fabrication : dans le cadre de la fabrication d'un nouveau produit, elle permet d'en valider toutes les étapes, faire les ajustements éventuels,
+        valider la conformité, etc.
+	Déroulement de ce type de réunion: préparation;  invitation; conduite de la réunion; précision, concision et positivité; conclusion; compte-rendu;
+        dossier de revue de projet; suivi.
 
-11.	Qu’est-ce qu’un livrable dans un projet ?
+8.	Qu’est-ce qu’un livrable dans un projet ?
 
-        - La conduite d'un projet débouche sur un produit, un service, etc. Cette finalité, appelée "livrable", est le résultat tangible d'une production réelle, appréhendable, mesurable attendue par le client final.
+        - La conduite d'un projet débouche sur un produit, un service, etc. Cette finalité, appelée "livrable", est le résultat tangible d'une production réelle,
+   	appréhendable, mesurable attendue par le client final.
   	Un projet peut, bien sûr, avoir plusieurs livrables.
   	
-12.	Quels sont les 3 piliers SCRUM ? Définir chacun d’entre eux
+9.	Quels sont les 3 piliers SCRUM ? Définir chacun d’entre eux
 	
         -Les trois piliers de Scrum sont:
         1) Transparence : les faits sont présentés tels qu'ils sont à toutes les parties prenantes qui sont concernées directement ou indirectement.
         2)Inspection : le travail est vérifié au fur et à mesure pour éviter de devoir refaire deux fois la même chose.
         3)Adaptation : l'équipe Scrum s'adapte continuellement au projet, à son contexte, et à ce qu'elle apprend en cours de route grâce à l'empirisme.
 
-13.	Qu’est-ce que le DevOps et quel est son objectif principal ?
-14.	Qu’est-ce que l’intégration continue ? 
-15.	Qu’est-ce que Docker ? Et en quoi est-il utile dans le cadre du DevOps ?
-16.	Qu’est-ce qu’un test unitaire ? 
-17.	Quelle est l'unité de code testée lors d'un test unitaire ?
-18.	Quelles sont les caractéristiques d'un bon test unitaire ?
-19.	Qu'est-ce qu'une assertion dans un test unitaire ?
+10.	Qu’est-ce que le DevOps et quel est son objectif principal ?
+         - le DevOps est une approche conciliant le développement et les opérations.
+   	 — est un mouvement en ingénierie informatique et une pratique technique visant à l'unification du développement logiciel (dev)
+         et de l'administration des infrastructures informatiques (ops), notamment l'administration système.
+   	Couramment utilisée dans le domaine du développement logiciel, elle est aussi adoptée pour la Data Science et le Machine Learning.
+   	DevOps est une pratique de collaboration entre Dev et Ops. Elle vise à supprimer les contraintes entre ces équipes, pour accélérer la livraison de valeur aux utilisateurs.
+   	En deux mots, il s’agit de mettre la collaboration entre les équipes au service de l’amélioration continue du système de production logicielle.
+   	
+11.	Qu’est-ce que l’intégration continue ?
+
+        - L'intégration continue est une méthode de développement de logiciel DevOps par laquelle les développeurs intègrent régulièrement
+   	leurs modifications de code à un référentiel centralisé, suite à quoi des opérations de création et de test sont automatiquement exécutées.
+   	
+12.	Qu’est-ce que Docker ? Et en quoi est-il utile dans le cadre du DevOps ?
+        Docker est une plateforme permettant de lancer certaines applications dans des conteneurs logiciels lancée en 2013.
+
+       Docker est un outil qui peut empaqueter une application et ses dépendances dans un conteneur isolé, qui pourra être exécuté sur n'importe quel serveur ».
+   	Il ne s'agit pas de virtualisation, mais de conteneurisation, une forme plus légère qui s'appuie sur certaines parties de la machine hôte pour son fonctionnement.
+   	Cette approche permet d'accroître la flexibilité et la portabilité d’exécution d'une application, laquelle va pouvoir tourner de façon fiable et prévisible
+   	sur une grande variété de machines hôtes, que ce soit sur la machine locale, un cloud privé ou public, une machine nue, etc.
+   	
+   	Il s'agit actuellement du moteur de conteneurisation le plus utilisé. Un grand avantage de Docker est la possibilité de modéliser chaque conteneur
+   	sous la forme d'une image que l'on peut stocker localement ou sur le Docker Hub, endroit public où de nombreuses images sont publiées et mises à jour régulièrement.
+   	
+13.	Qu’est-ce qu’un test unitaire ?
+        - une procédure permettant de vérifier le bon fonctionnement d'une partie précise d'un logiciel ou d'une portion d'un programme (appelée « unité » ou « module »).
+   	
+14.	Quelle est l'unité de code testée lors d'un test unitaire ?
+        - Ces unités peuvent être des fonctions, des méthodes, ou des classes. L'objectif principal est d'isoler chaque partie du programme
+   	et de vérifier son bon fonctionnement de manière indépendante.
+   	
+15.	Quelles sont les caractéristiques d'un bon test unitaire ?
+
+	1. Isolé Chaque test unitaire doit pouvoir être autonome, ce qui signifie qu’il peut exister indépendamment d’autres facteurs. ...
+        2. Rapide Tenez compte du volume de code à tester et du temps qu’il faudrait pour effectuer suffisamment de tests pour obtenir des résultats satisfaisants. ...
+        3. Cohérent Les tests unitaires doivent renvoyer des résultats identiques à chaque fois. ...
+        4. Autocontrôle ..
+           
+16.	Qu'est-ce qu'une assertion dans un test unitaire ?
+        - Les tests unitaires ne sont utiles que s'ils incluent des assertions qui valident que la méthode testée renvoie la bonne valeur
+   	et/ou ajuste l'état des autres objets comme prévu.
 
 ------------------------------------------------------------------------------------------------------------------
 XII. English
@@ -850,37 +1027,37 @@ b.	Define the layout and design of web pages
 c.	Handle server-side operations
 
 
-3)	Which programming language is primarily used for server-side web development ?
-a.	PHP
+2)	Which programming language is primarily used for server-side web development ?
+a.	PHP  - OK
 b.	JavaScript
 c.	HTML
 
-4)	What is the purpose of a web browser ?
-a.	To render and display web pages
+3)	What is the purpose of a web browser ?
+a.	To render and display web pages - OK
 b.	To execute serve-side code
 c.	To manage databases
 
-5)	What is the difference between GET and POST methods in HTTP ?
-a.	GET retrieves data from a server, while POST submits data to a server
+4)	What is the difference between GET and POST methods in HTTP ?
+a.	GET retrieves data from a server, while POST submits data to a server - OK
 b.	GET submits data to a server, while POST retrieves data from a server
 c.	GET and POST methods are interchangeable
 
-6)	What is the purpose of version control systems (e.g., Git) in web development ?
-a.	To track changes and manage collaborative development
+5)	What is the purpose of version control systems (e.g., Git) in web development ?
+a.	To track changes and manage collaborative development - OK
 b.	To optimize website loading speed
 c.	To handle server-side scripting
 
-7)	What is the purpose of a framework in web development ?
-a.	To provide a structured environment for building web applications
+6)	What is the purpose of a framework in web development ?
+a.	To provide a structured environment for building web applications - OK
 b.	To handle network protocols and data transfer
 c.	To create visual designs and layouts for websites
 
-8)	What does NoSQL stand for ?
-a.	Not Only SQL
+7)	What does NoSQL stand for ?
+a.	Not Only SQL - OK
 b.	Non-Structured Query Language
 c.	New Object-Oriented Language
 
-9)	Which of the following is a characteristic of NoSQL databases ?
+8)	Which of the following is a characteristic of NoSQL databases ?
 a.	Strict schema enforcement
 b.	Support for complex transactions
-c.	Scalability and flexible data models
+c.	Scalability and flexible data models - OK
