@@ -751,8 +751,8 @@ VII. Symfony
    	  Il est simple à utiliser et a une bonne capacité à séparer efficacement la logique de présentation de la logique métier dans les applications web.
    	
 6.	Qu’est-ce qu’un ORM ? Quel est son utilité et comment s’appelle-t-il au sein de Symfony ?
-7.	Qu’est-ce que l’injection de dépendances ? 
-        Quel est l’outil utilisé dans ce contexte et quel fichier contient l’intégralité des dépendances du projet ?
+   
+7.	Qu’est-ce que l’injection de dépendances ?Quel est l’outil utilisé dans ce contexte et quel fichier contient l’intégralité des dépendances du projet ?
 8.	Que permet le bundle Maker au sein de Symfony ? 
 9.	Quel est le langage de requêtage exploité au sein d’un projet Symfony ?
 10.	Quel est le composant qui garantit l’authentification et l’autorisation des utilisateurs ?
@@ -768,17 +768,19 @@ VIII. Sécurité
    	
 2.	Qu’est-ce que la faille XSS ? Comment s’en prémunir ?
 
-        - La faille XSS consiste à injecter du script dans les pages web.
+        - LC'est une faille qui permet d'injecter dans un site web du code malveillant. Pour s'en prémunir il faut filtrer toutes les données recues
   	
 3.	Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
+        - L'attaque par dictionnaire est une tentative de trouver un mot de passe en testant différents mots de passe contenus dans une liste. L'attaque par force brute est une tentative de trouver un mot de passe correspondant à un identifiant en testant chaque combinaison possible
+  	
 4.	Définir l’attaque par force brute et l’attaque par dictionnaire
-5.	Existe-t-il d’autres failles de sécurité ? 
+6.	Existe-t-il d’autres failles de sécurité ? 
         Citer celles-ci et expliquer simplement leur comportement
-6.	A quoi servent l’authentification et l’autorisation dans un contexte d’application web ?
-7.	Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
-8.	Qu’est-ce qu’une politique de mots de passe forts ?
-9.	Qu’est-ce que l’hameçonnage ?
-10.	Définir la « validation des entrées »
+7.	A quoi servent l’authentification et l’autorisation dans un contexte d’application web ?
+8.	Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
+9.	Qu’est-ce qu’une politique de mots de passe forts ?
+10.	Qu’est-ce que l’hameçonnage ?
+11.	Définir la « validation des entrées »
 
 -----------------------------------------------------------------------------------------------------------------------
 IX. RGPD
